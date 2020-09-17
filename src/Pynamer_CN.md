@@ -6,7 +6,7 @@ date: 2020-09-17 14:54
 status: publish
 author: CrazyDogen
 categories: 
-  - 归档
+  - Archived
 tags: 
   - Name generator
   - Chinese name dictionary
