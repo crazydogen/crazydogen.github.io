@@ -1,6 +1,3 @@
 [submodule "Maverick"]
 	path = Maverick
 	url = https://github.com/AlanDecode/Maverick.git
-[submodule "Maverick-Theme-Galileo"]
-	path = Maverick-Theme-Galileo
-	url = https://github.com/AlanDecode/Maverick-Theme-Galileo.git
