@@ -11,7 +11,7 @@ archives_page_size = 20
 template = {
     "name": "Galileo",
     "type": "local",
-    "path": "../Maverick-Theme-Galileo"
+    "path": "../Galileo"
 }
 enable_jsdelivr = {
     "enabled": True,
