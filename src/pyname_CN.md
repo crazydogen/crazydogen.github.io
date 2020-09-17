@@ -1,18 +1,18 @@
 ---
 layout: post
 title: A simple Chinese full name generator based on the TOP102 Chinese surname and pinyin first name.
-slug: default
+slug: pyname_CN
 date: 2020-09-17 14:54
 status: publish
 author: CrazyDogen
 categories: 
-  - default
+  - 归档
 tags: 
   - Name generator
   - Chinese name dictionary
 excerpt: simple, easy to use
 ---
-# pynamer_CN
+
 A simple Chinese full name generator based on the TOP102 Chinese surname and pinyin first name.
 ## What is pynamer_CN?
 Pynamer_CN is a simple full name generator, which can generate 18 styles of the Chinese name (e.g. zhangsan, Zhangsan, ZhangSan, ZHANGSAN, sanzhang, SanZhang, Sanzhang, SANZHANG, zs or zhs). According to news about the National Name Report of China in 2019, the top102 surname of Chinese has covered 80%+ surnames in China. 
