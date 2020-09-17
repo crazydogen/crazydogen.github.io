@@ -79,4 +79,4 @@ head_addon = r'''
 
 footer_addon = ''
 
-body_addon = 'font-family: 'Nunito Sans';font-size: 22px;'
+body_addon = ''
