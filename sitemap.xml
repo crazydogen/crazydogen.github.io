@@ -34,13 +34,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
     <loc>/archives/default/</loc>
-    <lastmod>2020-06-19</lastmod>
-    <changefreq>always</changefreq>
-    <priority>0.5</priority>
-</url>
-
-<url>
-    <loc>/archives/default/</loc>
     <lastmod>2020-04-19</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
