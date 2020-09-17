@@ -72,11 +72,11 @@ head_addon = r'''
 <meta http-equiv="x-dns-prefetch-control" content="on">
 <link rel="icon" type="image/png" href="./logo.png">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<link href='https://fonts.googleapis.com/css?family=Nunito Sans' rel='stylesheet'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
 '''
 
 footer_addon = ''
 
-body_addon = ''
+body_addon = 'font-family: 'Nunito Sans';font-size: 22px;'
