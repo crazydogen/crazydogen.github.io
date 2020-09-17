@@ -17,7 +17,7 @@ archives_page_size = 20
 # }
 enable_jsdelivr = {
     "enabled": True,
-    "repo": "crazydogen/crazydogen.github.io@master"
+    "repo": "crazydogen/crazydogen.github.io@gh-pages"
 }
 
 # 站点设置
