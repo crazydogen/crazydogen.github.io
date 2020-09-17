@@ -19,7 +19,7 @@ enable_jsdelivr = {
     "enabled": True,
     "repo": "crazydogen/crazydogen.github.io@gh-pages"
 }
-category_by_folder = False
+
 # 站点设置
 site_name = "0x262f"
 site_logo = "${static_prefix}logo.png"
