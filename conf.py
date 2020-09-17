@@ -16,7 +16,7 @@ template = {
     "branch": "latest"
 }
 enable_jsdelivr = {
-    "enabled": True,
+    "enabled": False,
     "repo": "crazydogen/crazydogen.github.io@gh-pages"
 }
 
@@ -24,11 +24,11 @@ enable_jsdelivr = {
 site_name = "0x262f"
 site_logo = "${static_prefix}logo.png"
 site_build_date = "2020-04-19T14:51+08:00"
-author = "Crazydogen"
+author = "CrazyDogen"
 email = "ZVd4cE1USXhNaU52ZFhSc2IyOXJMbU52YlE9PQ=="
 author_homepage = "https://crazydogen.github.io"
 description = "Stay Hungry. Stay Foolish"
-key_words = ['Crazydogen','blog']
+key_words = ['CrazyDogen','blog']
 language = 'zh-CN'
 external_links = [
     {
