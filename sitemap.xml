@@ -19,7 +19,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-    <loc>/archives/default/</loc>
+    <loc>/archives/2020-04-19-test/</loc>
     <lastmod>2020-04-19</lastmod>
     <changefreq>always</changefreq>
     <priority>0.5</priority>
