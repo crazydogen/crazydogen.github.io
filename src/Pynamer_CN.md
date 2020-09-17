@@ -1,12 +1,13 @@
 ---
 layout: post
-title: A simple Chinese full name generator based on the TOP102 Chinese surname and pinyin first name.
+title: Pynamer_CN
 slug: Pynamer_CN
 date: 2020-09-17 14:54
 status: publish
 author: CrazyDogen
 categories: 
-  - Archived
+  - Python
+  - InfoSec
 tags: 
   - Name generator
   - Chinese name dictionary
