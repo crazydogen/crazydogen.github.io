@@ -3,7 +3,7 @@
 """
 
 # For Maverick
-site_prefix = "/Blog/"
+site_prefix = "/"
 source_dir = "../src/"
 build_dir = "../dist/"
 index_page_size = 10
@@ -15,7 +15,7 @@ template = {
 }
 enable_jsdelivr = {
     "enabled": True,
-    "repo": "crazydogen/Blog@gh-pages"
+    "repo": "crazydogen/crazydogen.github.io@gh-pages"
 }
 
 # 站点设置
@@ -24,7 +24,7 @@ site_logo = "${static_prefix}logo.png"
 site_build_date = "2020-04-19T14:51+08:00"
 author = "Crazydogen"
 email = "ZVd4cE1USXhNaU52ZFhSc2IyOXJMbU52YlE9PQ=="
-author_homepage = "https://crazydogen.github.io/Blog/"
+author_homepage = "https://crazydogen.github.io"
 description = "Stay Hungry. Stay Foolish"
 key_words = ['Crazydogen','blog']
 language = 'zh-CN'
