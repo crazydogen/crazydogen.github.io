@@ -26,7 +26,7 @@ site_logo = "${static_prefix}logo.png"
 site_build_date = "2020-04-19T14:51+08:00"
 author = "CrazyDogen"
 email = "ZVd4cE1USXhNaU52ZFhSc2IyOXJMbU52YlE9PQ=="
-author_homepage = "https://crazydogen.github.io"
+author_homepage = "https://github.com/crazydogen"
 description = "Stay Hungry. Stay Foolish"
 key_words = ['CrazyDogen','blog']
 language = 'zh-CN'
@@ -69,7 +69,7 @@ social_links = [
     {
         "name": "GitHub",
         "url": "https://github.com/crazydogen",
-        "icon": "gi gi-github"
+        "icon": "fab gi-github"
     },
 #     {
 #         "name": "Weibo",
