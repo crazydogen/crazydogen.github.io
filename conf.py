@@ -29,7 +29,7 @@ email = "ZVd4cE1USXhNaU52ZFhSc2IyOXJMbU52YlE9PQ=="
 author_homepage = "https://github.com/crazydogen"
 description = "Stay Hungry. Stay Foolish"
 key_words = ['CrazyDogen','blog']
-language = 'zh-CN'
+language = 'en'
 external_links = [
     {
         "name": "Maverick",
@@ -39,22 +39,22 @@ external_links = [
 ]
 nav = [
     {
-        "name": "首页",
+        "name": "Home",
         "url": "${site_prefix}",
         "target": "_self"
     },
     {
-        "name": "归档",
+        "name": "Archived",
         "url": "${site_prefix}archives/",
         "target": "_self"
     },
     {
-        "name": "杂",
-        "url": "${site_prefix}sundries/",
+        "name": "Thoughts",
+        "url": "${site_prefix}thoughts/",
         "target": "_self"
     },
     {
-        "name": "关于",
+        "name": "About",
         "url": "${site_prefix}about/",
         "target": "_self"
     }
