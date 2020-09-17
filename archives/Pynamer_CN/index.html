@@ -23,19 +23,20 @@
         }
     </script>
     
-<title>标签: blog - 0x262f</title>
+<title>A simple Chinese full name generator based on the TOP102 Chinese surname and pinyin first name. - 0x262f</title>
 <meta name="author" content="CrazyDogen" />
-<meta name="description" content="Stay Hungry. Stay Foolish" />
-<meta property="og:title" content="标签: blog - 0x262f" />
-<meta property="og:description" content="Stay Hungry. Stay Foolish" />
+<meta name="description" content="simple, easy to use" />
+<meta property="og:title" content="A simple Chinese full name generator based on the TOP102 Chinese surname and pinyin first name. - 0x262f" />
+<meta property="og:description" content="simple, easy to use" />
 <meta property="og:site_name" content="0x262f" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="/tag/blog/" />
-<meta property="og:image" content="0x262f" />
-<meta name="twitter:title" content="标签: blog - 0x262f" />
-<meta name="twitter:description" content="Stay Hungry. Stay Foolish" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/archives/Pynamer_CN/" />
+<meta property="og:image" content="" />
+<meta property="article:published_time" content="2020-09-17T14:54:00-00.00" />
+<meta name="twitter:title" content="A simple Chinese full name generator based on the TOP102 Chinese surname and pinyin first name. - 0x262f" />
+<meta name="twitter:description" content="simple, easy to use" />
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/crazydogen/crazydogen.github.io@gh-pages/logo.png" />
+<meta name="twitter:image" content="" />
 
 
     
@@ -70,27 +71,101 @@
             <div class="wrapper">
                 
 <main>    
-    
+    <section class="ga-section ga-content">
+        <article class="yue">
+            <h1 class="ga-post_title">A simple Chinese full name generator based on the TOP102 Chinese surname and pinyin first name.</h1>
+            <span class="ga-post_meta ga-mono">
+                <span>CrazyDogen</span>
+                <time>
+                    2020-09-17
+                </time>
+                
+                in <a no-style class="category" href="/category/%E5%BD%92%E6%A1%A3/">
+                    归档
+                </a>
+                
+                
+            </span>
+            <div class="ga-content_body">
+                <p>A simple Chinese full name generator based on the TOP102 Chinese surname and pinyin first name.</p><h2>What is pynamer_CN?</h2>
+<p>Pynamer_CN is a simple full name generator, which can generate 18 styles of the Chinese name (e.g. zhangsan, Zhangsan, ZhangSan, ZHANGSAN, sanzhang, SanZhang, Sanzhang, SANZHANG, zs or zhs). According to news about the National Name Report of China in 2019, the top102 surname of Chinese has covered 80%+ surnames in China. 
+There are also some common first names used by most Chinese people. Pynamer_CN is written with simple python3 codes using if-elif-else structure. Surprisingly, pynamer_CN is also supporting python2.</p><h2>Why pynamer_CN?</h2>
+<ul>
+<li>Easy to use</li>
+<li>Support Python2/3 without dependencies</li>
+<li>Up to 37125055 chinese names without duplication</li>
+</ul>
+<h2>What you can do with pynamer_CN?</h2>
+<ul>
+<li>By pynamer_CN, you can generate a common Chinese name for yourself.</li>
+<li>Build brute-force passwd dictionary (with pydictor or any dictor).</li>
+<li>Build your own NOT USE passwd lists.</li>
+</ul>
+<h2>How to use it?</h2>
+<p>Usage: python pynamer_CN.py [-h] [-nl NL]
+                     [-m {-1,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17}] [-o O]</p><p>e.g.</p>
+<pre><code>python pynamer_CN -o ~/example0.txt -m 0
 
-<section id="ga-archive_list" class="ga-section" data-title="#blog">
-    <ul>
-        
-        <li>
-            <h1><a target="_self" class="ga-highlight" href="/archives/default/">test</a></h1>
-            <time class="ga-mono" datetime="2020-04-19T14:54:00-00.00">
-                2020-04-19
-            </time>
-        </li>
-        
-    </ul>
+python pynamer_CN -o ~/example1.txt -m 0 -nl HANDPICK_NAME
+
+</code></pre>
+<h3>Name styles</h3>
+<ul>
+<li><p>-1: All 0-17  NOTE if use this mode Make sure you are using 64-bit version to obtain enough memory(&gt; 4GB)</p></li>
+<li><p>0: SURN + 1 NAME (All lowercase e.g. zhangsan)</p></li>
+<li><p>1: SURN + 1 NAME (Only the first letter uppercase e.g. Zhangsan)</p></li>
+<li><p>2: SURN + 1 NAME (First letter of SURM or NAME uppercase e.g. ZhangSan)</p></li>
+<li><p>3: SURN + 1 NAME (ALL uppercase e.g. ZHANGSAN)</p></li>
+<li><p>4: SURN + 1 NAME (All lowercase with another order e.g. sanzhang)</p></li>
+<li><p>5: SURN + 1 NAME (Only the first letter uppercase with another order e.g. Sanzhang)</p></li>
+<li><p>6: SURN + 1 NAME (First letter of SURM or NAME uppercase with another order e.g. SanZhang)</p></li>
+<li><p>7: SURN + 1 NAME (ALL uppercase with another oder e.g. SANZHANG)</p></li>
+<li><p>8: SURN + 2 NAME (All lowercase e.g. liyiyi)</p></li>
+<li><p>9: SURN + 2 NAME (Only the first letter uppercase e.g. Liyiyi)</p></li>
+<li><p>10: SURN + 2 NAME (First letter of SURM or NAME uppercase e.g. LiYiYi)</p></li>
+<li><p>11: SURN + 2 NAME (ALL uppercase e.g. LIYIYI)</p></li>
+<li><p>12: SURN + 2 NAME (All lowercase with another order e.g. yiyili)</p></li>
+<li><p>13: SURN + 2 NAME (Only the first letter uppercase with another order e.g. Yiyili)</p></li>
+<li><p>14: SURN + 2 NAME (First letter of SURM or NAME uppercase with another order e.g. YiYiLi)</p></li>
+<li><p>15: SURN + 2 NAME (ALL uppercase with another order e.g. YIYILI)</p></li>
+<li><p>16: SURN + 1 NAME (Abbreviation e.g. zhs or zs)</p></li>
+<li><p>17: SURN + 2 NAME (Abbreviation e.g. lyy)</p></li>
+</ul>
+<p>Here are some generated examples:</p><p><a href="https://github.com/crazydogen/pynamer_CN/blob/master/example0.txt">example0</a>
+<a href="https://github.com/crazydogen/pynamer_CN/blob/master/example1.txt">example1</a></p>
+            </div>
+        </article>
+        <div id="ga-tags">
+    
+    <span class="ga-tag">
+        <a class="ga-highlight" href="/tag/Name%20generator/">#Name generator</a>
+    </span>
+    
+    <span class="ga-tag">
+        <a class="ga-highlight" href="/tag/Chinese%20name%20dictionary/">#Chinese name dictionary</a>
+    </span>
+    
+</div>
+    </section>
+
+    
+<section id="ga-content_pager">
+
+    <div class="next">
+        <h3>没有了</h3>
+        <p class="yue">这是最新的文章</p>
+    </div>
+
+
+    <div class="prev">
+        <a class="ga-highlight" href="/archives/pyname_CN/">A simple Chinese full name generator based on the TOP102 Chinese surname and pinyin first name.</a>
+        <p class="yue">simple, easy to use</p>
+    </div>
+
 </section>
 
-<section class="ga-section ga-mono" id="ga-pager">
-    
-    <span>Page 1 of 1</span>
-    
-</section>
 
+    
 
 </main>
 
