@@ -86,6 +86,8 @@ head_addon = r'''
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
+
+
 '''
 
 footer_addon = ''
