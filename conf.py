@@ -61,21 +61,11 @@ nav = [
 ]
 
 social_links = [
-#     {
-#         "name": "Twitter",
-#         "url": "https://twitter.com/AlanDecode",
-#         "icon": "gi gi-twitter"
-#     },
     {
         "name": "GitHub",
         "url": "https://github.com/crazydogen",
-        "icon": "fab gi-github"
-    },
-#     {
-#         "name": "Weibo",
-#         "url": "https://weibo.com/5245109677/",
-#         "icon": "gi gi-weibo"
-#     }
+        "icon": "fab fa-github"
+    }
 ]
 
 head_addon = r'''
