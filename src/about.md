@@ -11,7 +11,7 @@ categories:
 tags: 
   - theme
 ---
-耳机癌中期患者
+ヘッドセット癌の中期患者
 - Bloger 0.001x
 - Coder  0.01x
 - Geeker 0.01x
