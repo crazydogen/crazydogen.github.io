@@ -19,7 +19,7 @@
     <script>
         var ExSearchConfig = {
             root: "",
-            api: "https://cdn.jsdelivr.net/gh/crazydogen/crazydogen.github.io@gh-pages/288212db630fd9099c3f590caa716dec.json"
+            api: "https://cdn.jsdelivr.net/gh/crazydogen/crazydogen.github.io@gh-pages/2677350c250fed42683f454cf29e296a.json"
         }
     </script>
     
@@ -84,7 +84,7 @@
             </span>
             <div class="ga-content_body">
                 <p>A simple Chinese full name generator based on the TOP102 Chinese surname and pinyin first name.</p><h2>What is pynamer_CN?</h2>
-<p>Pynamer_CN is a simple full name generator, which can generate 18 styles of the Chinese name (e.g. zhangsan, Zhangsan, ZhangSan, ZHANGSAN, sanzhang, SanZhang, Sanzhang, SANZHANG, zs or zhs). According to news about the National Name Report of China in 2019, the top102 surname of Chinese has covered 80%+ surnames in China. 
+<p>Pynamer_CN is a simple full name generator, which can generate 18 styles of the Chinese name (e.g. zhangsan, Zhangsan, ZhangSan, ZHANGSAN, sanzhang, SanZhang, Sanzhang, SANZHANG, zs or zhs). According to news about the National Name Report of China in 2019, the top102 surname of Chinese has covered <strong>80%+</strong> surnames in China. 
 There are also some common first names used by most Chinese people. Pynamer_CN is written with simple python3 codes using if-elif-else structure. Surprisingly, pynamer_CN is also supporting python2.</p><h2>Why pynamer_CN?</h2>
 <ul>
 <li>Easy to use</li>
@@ -95,40 +95,56 @@ There are also some common first names used by most Chinese people. Pynamer_CN i
 <ul>
 <li>By pynamer_CN, you can generate a common Chinese name for yourself.</li>
 <li>Build brute-force passwd dictionary (with pydictor or any dictor).</li>
-<li>Build your own NOT USE passwd lists.</li>
+<li>Build your own <strong>NOT USE</strong> passwd lists.</li>
 </ul>
 <h2>How to use it?</h2>
 <p>Usage: python pynamer_CN.py [-h] [-nl NL]
-                     [-m {-1,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17}] [-o O]</p><p>e.g.</p>
-<pre><code>python pynamer_CN -o ~/example0.txt -m 0
-
-python pynamer_CN -o ~/example1.txt -m 0 -nl HANDPICK_NAME
-
-</code></pre>
-<h3>Name styles</h3>
+                     [-m {-1,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17}] [-o O]
+​
+e.g.
+​
+    python pynamer_CN -o ~/example0.txt -m 0
+​
+    python pynamer_CN -o ~/example1.txt -m 0 -nl HANDPICK_NAME
+​</p><h3>Name styles</h3>
 <ul>
-<li><p>-1: All 0-17  NOTE if use this mode Make sure you are using 64-bit version to obtain enough memory(&gt; 4GB)</p></li>
-<li><p>0: SURN + 1 NAME (All lowercase e.g. zhangsan)</p></li>
-<li><p>1: SURN + 1 NAME (Only the first letter uppercase e.g. Zhangsan)</p></li>
-<li><p>2: SURN + 1 NAME (First letter of SURM or NAME uppercase e.g. ZhangSan)</p></li>
-<li><p>3: SURN + 1 NAME (ALL uppercase e.g. ZHANGSAN)</p></li>
-<li><p>4: SURN + 1 NAME (All lowercase with another order e.g. sanzhang)</p></li>
-<li><p>5: SURN + 1 NAME (Only the first letter uppercase with another order e.g. Sanzhang)</p></li>
-<li><p>6: SURN + 1 NAME (First letter of SURM or NAME uppercase with another order e.g. SanZhang)</p></li>
-<li><p>7: SURN + 1 NAME (ALL uppercase with another oder e.g. SANZHANG)</p></li>
-<li><p>8: SURN + 2 NAME (All lowercase e.g. liyiyi)</p></li>
-<li><p>9: SURN + 2 NAME (Only the first letter uppercase e.g. Liyiyi)</p></li>
-<li><p>10: SURN + 2 NAME (First letter of SURM or NAME uppercase e.g. LiYiYi)</p></li>
-<li><p>11: SURN + 2 NAME (ALL uppercase e.g. LIYIYI)</p></li>
-<li><p>12: SURN + 2 NAME (All lowercase with another order e.g. yiyili)</p></li>
-<li><p>13: SURN + 2 NAME (Only the first letter uppercase with another order e.g. Yiyili)</p></li>
-<li><p>14: SURN + 2 NAME (First letter of SURM or NAME uppercase with another order e.g. YiYiLi)</p></li>
-<li><p>15: SURN + 2 NAME (ALL uppercase with another order e.g. YIYILI)</p></li>
-<li><p>16: SURN + 1 NAME (Abbreviation e.g. zhs or zs)</p></li>
-<li><p>17: SURN + 2 NAME (Abbreviation e.g. lyy)</p></li>
+<li>-1: All 0-17  <strong>NOTE</strong> Make sure you are using 64-bit version to obtain enough memory(&gt; 4GB)</li>
+<li>0: SURN + 1 NAME (All lowercase e.g. zhangsan)</li>
+<li>1: SURN + 1 NAME (Only the first letter uppercase e.g. Zhangsan)</li>
+<li>2: SURN + 1 NAME (First letter of SURM or NAME uppercase e.g. ZhangSan)</li>
+<li>3: SURN + 1 NAME (ALL uppercase e.g. ZHANGSAN)</li>
 </ul>
-<p>Here are some generated examples:</p><p><a href="https://github.com/crazydogen/pynamer_CN/blob/master/example0.txt">example0</a>
-<a href="https://github.com/crazydogen/pynamer_CN/blob/master/example1.txt">example1</a></p>
+<p>​</p><ul>
+<li>4: SURN + 1 NAME (All lowercase with another order e.g. sanzhang)</li>
+<li>5: SURN + 1 NAME (Only the first letter uppercase with another order e.g. Sanzhang)</li>
+<li>6: SURN + 1 NAME (First letter of SURM or NAME uppercase with another order e.g. SanZhang)</li>
+<li>7: SURN + 1 NAME (ALL uppercase with another oder e.g. SANZHANG)</li>
+</ul>
+<p>​
+​</p><ul>
+<li>8: SURN + 2 NAME (All lowercase e.g. liyiyi)</li>
+<li>9: SURN + 2 NAME (Only the first letter uppercase e.g. Liyiyi)</li>
+<li>10: SURN + 2 NAME (First letter of SURM or NAME uppercase e.g. LiYiYi)</li>
+<li>11: SURN + 2 NAME (ALL uppercase e.g. LIYIYI)</li>
+</ul>
+<p>​</p><ul>
+<li>12: SURN + 2 NAME (All lowercase with another order e.g. yiyili)</li>
+<li>13: SURN + 2 NAME (Only the first letter uppercase with another order e.g. Yiyili)</li>
+<li>14: SURN + 2 NAME (First letter of SURM or NAME uppercase with another order e.g. YiYiLi)</li>
+<li>15: SURN + 2 NAME (ALL uppercase with another order e.g. YIYILI)</li>
+</ul>
+<p>​</p><ul>
+<li>16: SURN + 1 NAME (Abbreviation e.g. zhs or zs)</li>
+<li>17: SURN + 2 NAME (Abbreviation e.g. lyy)</li>
+</ul>
+<p>​
+Here are some generated examples:
+​
+<a href="https://github.com/crazydogen/pynamer_CN/blob/master/example0.txt">example0</a>
+<a href="https://github.com/crazydogen/pynamer_CN/blob/master/example1.txt">example1</a>
+​
+:) Feel free to open an issue for adding more names (if missed).</p><h2>License</h2>
+<p><a href="https://github.com/crazydogen/pynamer_CN/blob/master/LICENSE">MIT License</a></p>
             </div>
         </article>
         <div id="ga-tags">
