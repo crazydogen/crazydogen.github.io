@@ -4,7 +4,7 @@ title: About
 slug: about
 date: 2020/04/19 14:51:00
 status: publish
-author: Crazydogen
+author: CrazyDogen
 categories: 
   - Maverick
   - Dev
