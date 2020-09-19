@@ -12,6 +12,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+    <loc>/archives/kali_live_persistence/</loc>
+    <lastmod>2020-09-19</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
     <loc>/archives/Pynamer_CN/</loc>
     <lastmod>2020-09-17</lastmod>
     <changefreq>always</changefreq>
