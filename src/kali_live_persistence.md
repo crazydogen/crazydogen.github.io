@@ -30,7 +30,7 @@ If you want encrypted persistence, refer to [Adding Persistence to a Kali Linux 
 If you want nvidia graphics card enabled, make sure #nouveau# is **down** when you install nvidia driver.
 
 #1 You can change  UUI /boot/grub/grub.cfg
-e.g. F:\boot\grub\grub.cfg (F is my USB). Add parameter nouveau.modeset=0 under persistance section at the end of the line, after editation it should look like this:
+e.g. F:\boot\grub\grub.cfg (F is my USB). Add parameter #nouveau.modeset=0# under persistance section at the end of the line, after editation it should look like this:
 
     menuentry "Live system (persistence, check kali.org/prst)" {
     linux /live/vmlinuz-5.6.7-kali3-amd64 boot=live components splash username=root hostname=kali persistence nouveau.modeset=0
@@ -42,7 +42,7 @@ e.g. F:\boot\grub\grub.cfg (F is my USB). Add parameter nouveau.modeset=0 under 
     apt-get update && apt-get upgrade -y && apt-get dist-upgrade –y
     apt-get install linux-headers-$(uname -r) –y
     reboot
-#3 Now you should see that Kali booted in to low resolution login screen, GOOD. log in and type in terminal:
+#3 Now you should see that Kali booted into low resolution login screen. Login and type in terminal:
 
 **init 3** (will exit GUI and help nvidia drivers to install correctly)
 
@@ -51,7 +51,7 @@ e.g. F:\boot\grub\grub.cfg (F is my USB). Add parameter nouveau.modeset=0 under 
 Once this is done reboot and you should have USB bootable pendrive with NVIDIA drivers running.
 You can verify that with nvidia-smi command, also I need to mention that this worked for me even without updating initramfs (update-initramfs.distrib -u).
 
-## Post installation 
+## #0x04 Post installation 
 
 Ref.
 
