@@ -12,12 +12,10 @@ tags:
 excerpt: easy way to install kali live persistence
 ---
 
-# A easy way to build your own kali live system
-
 Using a kali live persistence is kind of compromise of choosing daily OS.
 However, I notice that it's a troublesome experience to install a kali live persistence. Here are my easy way to install it.
 ## #0x01 Download kali live image
-Download kali live iamge from [Offical download url](https://www.kali.org/downloads/). 
+Download kali live image from [Offical download url](https://www.kali.org/downloads/). 
 
 **Note** make sure you have checked SHA256.
 ## #0x02 Write kali live into USB
@@ -49,7 +47,7 @@ e.g. F:\boot\grub\grub.cfg (F is my USB). Add parameter nouveau.modeset=0 under 
 **init 3** (will exit GUI and help nvidia drivers to install correctly)
 
     apt-get install -y ocl-icd-libopencl1 nvidia-driver nvidia-cuda-toolkit
-    
+
 Once this is done reboot and you should have USB bootable pendrive with NVIDIA drivers running.
 You can verify that with nvidia-smi command, also I need to mention that this worked for me even without updating initramfs (update-initramfs.distrib -u).
 
