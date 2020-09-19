@@ -9,11 +9,11 @@ categories:
   - Kali
 tags: 
   - Kali live persistence
-excerpt: easy way to install kali live persistence
+excerpt: a easy way to install kali live persistence
 ---
 
 Using a kali live persistence is kind of compromise of choosing daily OS.
-However, I notice that it's a troublesome experience to install a kali live persistence. Here are my easy way to install it.
+However, I notice that it's a troublesome experience to install a kali live persistence. Here is my easy way to install it.
 ## #0x01 Download kali live image
 Download kali live image from [Offical download url](https://www.kali.org/downloads/). 
 
