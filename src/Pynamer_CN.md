@@ -7,7 +7,6 @@ status: publish
 author: CrazyDogen
 categories: 
   - Python
-  - InfoSec
 tags: 
   - Name generator
   - Chinese name dictionary
