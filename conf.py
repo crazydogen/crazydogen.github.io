@@ -27,7 +27,7 @@ site_build_date = "2020-04-19T14:51+08:00"
 author = "CrazyDogen"
 email = "ZVd4cE1USXhNaU52ZFhSc2IyOXJMbU52YlE9PQ=="
 author_homepage = "https://github.com/crazydogen"
-description = "Everything's a trade-off. Avoid unnecessary work, think more to do less."
+description = "Everything's a trade-off——void unnecessary work, think more to do less."
 key_words = ['CrazyDogen','blog']
 language = 'en'
 external_links = [
