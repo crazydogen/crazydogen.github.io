@@ -28,7 +28,8 @@ There are also some common first names used by most Chinese people. Pynamer_CN i
 ## How to use it?
 Usage: python pynamer_CN.py [-h] [-nl NL]
                      [-m {-1,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17}] [-o O]
-​
+
+
 e.g.
 ​
     python pynamer_CN -o ~/example0.txt -m 0
