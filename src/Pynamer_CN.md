@@ -31,7 +31,7 @@ Usage: python pynamer_CN.py [-h] [-nl NL]
 
 e.g.
 ```python
-python pynamer_CN -o ~/example0.txt -m 0
+    python pynamer_CN -o ~/example0.txt -m 0
 python pynamer_CN -o ~/example1.txt -m 0 -nl HANDPICK_NAME
 ```
 ### Name styles
