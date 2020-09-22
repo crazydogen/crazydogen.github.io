@@ -38,16 +38,17 @@ e.g. F:\boot\grub\grub.cfg (F is my USB). Add parameter #nouveau.modeset=0# unde
 **Note** select kali persistence to boot.
 
 #2 Once you have that ready boot to your kali persistence.
-
-    apt-get update && apt-get upgrade -y && apt-get dist-upgrade –y
-    apt-get install linux-headers-$(uname -r) –y
-    reboot
+```shell
+apt-get update && apt-get upgrade -y && apt-get dist-upgrade –y
+apt-get install linux-headers-$(uname -r) –y
+reboot
+```
 #3 Now you should see that Kali booted into low resolution login screen. Login and type in terminal:
 
 **init 3** (will exit GUI and help nvidia drivers to install correctly)
-
-    apt-get install -y ocl-icd-libopencl1 nvidia-driver nvidia-cuda-toolkit
-
+```shell
+apt-get install -y ocl-icd-libopencl1 nvidia-driver nvidia-cuda-toolkit
+```
 Once this is done reboot and you should have USB bootable pendrive with NVIDIA drivers running.
 You can verify that with nvidia-smi command, also I need to mention that this worked for me even without updating initramfs (update-initramfs.distrib -u).
 
