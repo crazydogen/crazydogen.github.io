@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>0x262f</title><link>/</link><description>Everything's a trade-off——avoid unnecessary work, think more to do less.</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://cdn.jsdelivr.net/gh/crazydogen/crazydogen.github.io@gh-pages/logo.png</url><title>0x262f</title><link>/</link></image><language>en</language><lastBuildDate>Tue, 22 Sep 2020 03:50:24 +0806</lastBuildDate><pubDate>Tue, 22 Sep 2020 03:50:24 +0806</pubDate><item><title>test</title><link>/archives/2020-04-19-test/</link><description>&lt;ul&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>0x262f</title><link>/</link><description>Everything's a trade-off——avoid unnecessary work, think more to do less.</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://cdn.jsdelivr.net/gh/crazydogen/crazydogen.github.io@gh-pages/logo.png</url><title>0x262f</title><link>/</link></image><language>en</language><lastBuildDate>Tue, 22 Sep 2020 03:53:28 +0806</lastBuildDate><pubDate>Tue, 22 Sep 2020 03:53:28 +0806</pubDate><item><title>test</title><link>/archives/2020-04-19-test/</link><description>&lt;ul&gt;
 &lt;li&gt;0x01&lt;/li&gt;
 &lt;/ul&gt;
 </description><author>ZVd4cE1USXhNaU52ZFhSc2IyOXJMbU52YlE9PQ== (CrazyDogen)</author><guid isPermaLink="true">/archives/2020-04-19-test/</guid><pubDate>Sun, 19 Apr 2020 14:54:00 +0806</pubDate></item><item><title>Pynamer_CN</title><link>/archives/Pynamer_CN/</link><description>&lt;p&gt;A simple Chinese full name generator based on the TOP102 Chinese surname and pinyin first name.&lt;/p&gt;&lt;h2&gt;What is pynamer_CN?&lt;/h2&gt;
@@ -18,33 +18,30 @@ There are also some common first names used by most Chinese people. Pynamer_CN i
 &lt;/ul&gt;
 &lt;h2&gt;How to use it?&lt;/h2&gt;
 &lt;p&gt;Usage: python pynamer_CN.py [-h] [-nl NL]
-                     [-m {-1,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17}] [-o O]&lt;/p&gt;&lt;p&gt;e.g.&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;python pynamer_CN -o ~/example0.txt -m 0
-
-python pynamer_CN -o ~/example1.txt -m 0 -nl HANDPICK_NAME
-
-&lt;/code&gt;&lt;/pre&gt;
+                     [-m {-1,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17}] [-o O]&lt;/p&gt;&lt;p&gt;e.g.&lt;/p&gt;&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="n"&gt;pynamer_CN&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;o&lt;/span&gt; &lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="n"&gt;example0&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;txt&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;
+    &lt;span class="n"&gt;python&lt;/span&gt; &lt;span class="n"&gt;pynamer_CN&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;o&lt;/span&gt; &lt;span class="o"&gt;~/&lt;/span&gt;&lt;span class="n"&gt;example1&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;txt&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt; &lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="n"&gt;nl&lt;/span&gt; &lt;span class="n"&gt;HANDPICK_NAME&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
 &lt;h3&gt;Name styles&lt;/h3&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;p&gt;-1: All 0-17  &lt;strong&gt;NOTE&lt;/strong&gt; Make sure you are using 64-bit version to obtain enough memory(&amp;gt; 4GB)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;0: SURN + 1 NAME (All lowercase e.g. zhangsan)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;1: SURN + 1 NAME (Only the first letter uppercase e.g. Zhangsan)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;2: SURN + 1 NAME (First letter of SURM or NAME uppercase e.g. ZhangSan)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;3: SURN + 1 NAME (ALL uppercase e.g. ZHANGSAN)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;4: SURN + 1 NAME (All lowercase with another order e.g. sanzhang)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;5: SURN + 1 NAME (Only the first letter uppercase with another order e.g. Sanzhang)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;6: SURN + 1 NAME (First letter of SURM or NAME uppercase with another order e.g. SanZhang)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;7: SURN + 1 NAME (ALL uppercase with another oder e.g. SANZHANG)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;8: SURN + 2 NAME (All lowercase e.g. liyiyi)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;9: SURN + 2 NAME (Only the first letter uppercase e.g. Liyiyi)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;10: SURN + 2 NAME (First letter of SURM or NAME uppercase e.g. LiYiYi)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;11: SURN + 2 NAME (ALL uppercase e.g. LIYIYI)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;12: SURN + 2 NAME (All lowercase with another order e.g. yiyili)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;13: SURN + 2 NAME (Only the first letter uppercase with another order e.g. Yiyili)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;14: SURN + 2 NAME (First letter of SURM or NAME uppercase with another order e.g. YiYiLi)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;15: SURN + 2 NAME (ALL uppercase with another order e.g. YIYILI)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;16: SURN + 1 NAME (Abbreviation e.g. zhs or zs)&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;17: SURN + 2 NAME (Abbreviation e.g. lyy)&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;-1: All 0-17  &lt;strong&gt;NOTE&lt;/strong&gt; Make sure you are using 64-bit version to obtain enough memory(&amp;gt; 4GB)&lt;/li&gt;
+&lt;li&gt;0: SURN + 1 NAME (All lowercase e.g. zhangsan)&lt;/li&gt;
+&lt;li&gt;1: SURN + 1 NAME (Only the first letter uppercase e.g. Zhangsan)&lt;/li&gt;
+&lt;li&gt;2: SURN + 1 NAME (First letter of SURM or NAME uppercase e.g. ZhangSan)&lt;/li&gt;
+&lt;li&gt;3: SURN + 1 NAME (ALL uppercase e.g. ZHANGSAN)&lt;/li&gt;
+&lt;li&gt;4: SURN + 1 NAME (All lowercase with another order e.g. sanzhang)&lt;/li&gt;
+&lt;li&gt;5: SURN + 1 NAME (Only the first letter uppercase with another order e.g. Sanzhang)&lt;/li&gt;
+&lt;li&gt;6: SURN + 1 NAME (First letter of SURM or NAME uppercase with another order e.g. SanZhang)&lt;/li&gt;
+&lt;li&gt;7: SURN + 1 NAME (ALL uppercase with another oder e.g. SANZHANG)&lt;/li&gt;
+&lt;li&gt;8: SURN + 2 NAME (All lowercase e.g. liyiyi)&lt;/li&gt;
+&lt;li&gt;9: SURN + 2 NAME (Only the first letter uppercase e.g. Liyiyi)&lt;/li&gt;
+&lt;li&gt;10: SURN + 2 NAME (First letter of SURM or NAME uppercase e.g. LiYiYi)&lt;/li&gt;
+&lt;li&gt;11: SURN + 2 NAME (ALL uppercase e.g. LIYIYI)&lt;/li&gt;
+&lt;li&gt;12: SURN + 2 NAME (All lowercase with another order e.g. yiyili)&lt;/li&gt;
+&lt;li&gt;13: SURN + 2 NAME (Only the first letter uppercase with another order e.g. Yiyili)&lt;/li&gt;
+&lt;li&gt;14: SURN + 2 NAME (First letter of SURM or NAME uppercase with another order e.g. YiYiLi)&lt;/li&gt;
+&lt;li&gt;15: SURN + 2 NAME (ALL uppercase with another order e.g. YIYILI)&lt;/li&gt;
+&lt;li&gt;16: SURN + 1 NAME (Abbreviation e.g. zhs or zs)&lt;/li&gt;
+&lt;li&gt;17: SURN + 2 NAME (Abbreviation e.g. lyy)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Here are some generated examples:&lt;/p&gt;&lt;p&gt;&lt;a href="https://github.com/crazydogen/pynamer_CN/blob/master/example0.txt"&gt;example0&lt;/a&gt;
 &lt;a href="https://github.com/crazydogen/pynamer_CN/blob/master/example1.txt"&gt;example1&lt;/a&gt;&lt;/p&gt;&lt;p&gt;:) Feel free to open an issue for adding more names (if missed).&lt;/p&gt;&lt;h2&gt;License&lt;/h2&gt;

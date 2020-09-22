@@ -19,7 +19,7 @@
     <script>
         var ExSearchConfig = {
             root: "",
-            api: "https://cdn.jsdelivr.net/gh/crazydogen/crazydogen.github.io@gh-pages/7049eb2153db3270cad05217d906d94f.json"
+            api: "https://cdn.jsdelivr.net/gh/crazydogen/crazydogen.github.io@gh-pages/aa63d1b1767ba2088d7f8222a6a410ac.json"
         }
     </script>
     
@@ -99,33 +99,30 @@ There are also some common first names used by most Chinese people. Pynamer_CN i
 </ul>
 <h2>How to use it?</h2>
 <p>Usage: python pynamer_CN.py [-h] [-nl NL]
-                     [-m {-1,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17}] [-o O]</p><p>e.g.</p>
-<pre><code>python pynamer_CN -o ~/example0.txt -m 0
-
-python pynamer_CN -o ~/example1.txt -m 0 -nl HANDPICK_NAME
-
-</code></pre>
+                     [-m {-1,0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17}] [-o O]</p><p>e.g.</p><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">pynamer_CN</span> <span class="o">-</span><span class="n">o</span> <span class="o">~/</span><span class="n">example0</span><span class="o">.</span><span class="n">txt</span> <span class="o">-</span><span class="n">m</span> <span class="mi">0</span>
+    <span class="n">python</span> <span class="n">pynamer_CN</span> <span class="o">-</span><span class="n">o</span> <span class="o">~/</span><span class="n">example1</span><span class="o">.</span><span class="n">txt</span> <span class="o">-</span><span class="n">m</span> <span class="mi">0</span> <span class="o">-</span><span class="n">nl</span> <span class="n">HANDPICK_NAME</span>
+</pre></div>
 <h3>Name styles</h3>
 <ul>
-<li><p>-1: All 0-17  <strong>NOTE</strong> Make sure you are using 64-bit version to obtain enough memory(&gt; 4GB)</p></li>
-<li><p>0: SURN + 1 NAME (All lowercase e.g. zhangsan)</p></li>
-<li><p>1: SURN + 1 NAME (Only the first letter uppercase e.g. Zhangsan)</p></li>
-<li><p>2: SURN + 1 NAME (First letter of SURM or NAME uppercase e.g. ZhangSan)</p></li>
-<li><p>3: SURN + 1 NAME (ALL uppercase e.g. ZHANGSAN)</p></li>
-<li><p>4: SURN + 1 NAME (All lowercase with another order e.g. sanzhang)</p></li>
-<li><p>5: SURN + 1 NAME (Only the first letter uppercase with another order e.g. Sanzhang)</p></li>
-<li><p>6: SURN + 1 NAME (First letter of SURM or NAME uppercase with another order e.g. SanZhang)</p></li>
-<li><p>7: SURN + 1 NAME (ALL uppercase with another oder e.g. SANZHANG)</p></li>
-<li><p>8: SURN + 2 NAME (All lowercase e.g. liyiyi)</p></li>
-<li><p>9: SURN + 2 NAME (Only the first letter uppercase e.g. Liyiyi)</p></li>
-<li><p>10: SURN + 2 NAME (First letter of SURM or NAME uppercase e.g. LiYiYi)</p></li>
-<li><p>11: SURN + 2 NAME (ALL uppercase e.g. LIYIYI)</p></li>
-<li><p>12: SURN + 2 NAME (All lowercase with another order e.g. yiyili)</p></li>
-<li><p>13: SURN + 2 NAME (Only the first letter uppercase with another order e.g. Yiyili)</p></li>
-<li><p>14: SURN + 2 NAME (First letter of SURM or NAME uppercase with another order e.g. YiYiLi)</p></li>
-<li><p>15: SURN + 2 NAME (ALL uppercase with another order e.g. YIYILI)</p></li>
-<li><p>16: SURN + 1 NAME (Abbreviation e.g. zhs or zs)</p></li>
-<li><p>17: SURN + 2 NAME (Abbreviation e.g. lyy)</p></li>
+<li>-1: All 0-17  <strong>NOTE</strong> Make sure you are using 64-bit version to obtain enough memory(&gt; 4GB)</li>
+<li>0: SURN + 1 NAME (All lowercase e.g. zhangsan)</li>
+<li>1: SURN + 1 NAME (Only the first letter uppercase e.g. Zhangsan)</li>
+<li>2: SURN + 1 NAME (First letter of SURM or NAME uppercase e.g. ZhangSan)</li>
+<li>3: SURN + 1 NAME (ALL uppercase e.g. ZHANGSAN)</li>
+<li>4: SURN + 1 NAME (All lowercase with another order e.g. sanzhang)</li>
+<li>5: SURN + 1 NAME (Only the first letter uppercase with another order e.g. Sanzhang)</li>
+<li>6: SURN + 1 NAME (First letter of SURM or NAME uppercase with another order e.g. SanZhang)</li>
+<li>7: SURN + 1 NAME (ALL uppercase with another oder e.g. SANZHANG)</li>
+<li>8: SURN + 2 NAME (All lowercase e.g. liyiyi)</li>
+<li>9: SURN + 2 NAME (Only the first letter uppercase e.g. Liyiyi)</li>
+<li>10: SURN + 2 NAME (First letter of SURM or NAME uppercase e.g. LiYiYi)</li>
+<li>11: SURN + 2 NAME (ALL uppercase e.g. LIYIYI)</li>
+<li>12: SURN + 2 NAME (All lowercase with another order e.g. yiyili)</li>
+<li>13: SURN + 2 NAME (Only the first letter uppercase with another order e.g. Yiyili)</li>
+<li>14: SURN + 2 NAME (First letter of SURM or NAME uppercase with another order e.g. YiYiLi)</li>
+<li>15: SURN + 2 NAME (ALL uppercase with another order e.g. YIYILI)</li>
+<li>16: SURN + 1 NAME (Abbreviation e.g. zhs or zs)</li>
+<li>17: SURN + 2 NAME (Abbreviation e.g. lyy)</li>
 </ul>
 <p>Here are some generated examples:</p><p><a href="https://github.com/crazydogen/pynamer_CN/blob/master/example0.txt">example0</a>
 <a href="https://github.com/crazydogen/pynamer_CN/blob/master/example1.txt">example1</a></p><p>:) Feel free to open an issue for adding more names (if missed).</p><h2>License</h2>
