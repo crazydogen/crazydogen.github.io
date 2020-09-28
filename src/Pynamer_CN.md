@@ -10,7 +10,7 @@ categories:
 tags: 
   - Name generator
   - Chinese name dictionary
-excerpt: simple, easy to use
+excerpt: a simple Chinese full name generator
 ---
 
 A simple Chinese full name generator based on the TOP102 Chinese surname and pinyin first name.
