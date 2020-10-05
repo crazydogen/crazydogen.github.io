@@ -23,20 +23,19 @@
         }
     </script>
     
-<title>A easy way to build your own kali live system - 0x262f</title>
+<title>Tag: pics - 0x262f</title>
 <meta name="author" content="CrazyDogen" />
-<meta name="description" content="a easy way to install kali live persistence" />
-<meta property="og:title" content="A easy way to build your own kali live system - 0x262f" />
-<meta property="og:description" content="a easy way to install kali live persistence" />
+<meta name="description" content="Everything's a trade-off——avoid unnecessary work, think more to do less." />
+<meta property="og:title" content="Tag: pics - 0x262f" />
+<meta property="og:description" content="Everything's a trade-off——avoid unnecessary work, think more to do less." />
 <meta property="og:site_name" content="0x262f" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="/archives/kali_live_persistence/" />
-<meta property="og:image" content="" />
-<meta property="article:published_time" content="2020-09-19T19:54:00-00.00" />
-<meta name="twitter:title" content="A easy way to build your own kali live system - 0x262f" />
-<meta name="twitter:description" content="a easy way to install kali live persistence" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="/tag/pics/" />
+<meta property="og:image" content="0x262f" />
+<meta name="twitter:title" content="Tag: pics - 0x262f" />
+<meta name="twitter:description" content="Everything's a trade-off——avoid unnecessary work, think more to do less." />
 <meta name="twitter:card" content="summary" />
-<meta name="twitter:image" content="" />
+<meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/crazydogen/crazydogen.github.io@gh-pages/logo.png" />
 
 
     
@@ -68,71 +67,27 @@
             <div class="wrapper">
                 
 <main>    
-    <section class="ga-section ga-content">
-        <article class="yue">
-            <h1 class="ga-post_title">A easy way to build your own kali live system</h1>
-            <span class="ga-post_meta ga-mono">
-                <span>CrazyDogen</span>
-                <time>
-                    2020-09-19
-                </time>
-                
-                in <a no-style class="category" href="/category/Kali/">
-                    Kali
-                </a>
-                
-                
-            </span>
-            <div class="ga-content_body">
-                <p>Using a kali live persistence is kind of compromise of choosing daily OS.
-However, I notice that it's a troublesome experience to install a kali live persistence. Here is my easy way to install it.</p><h2>#0x01 Download kali live image</h2>
-<p>Download kali live image from <a href="https://www.kali.org/downloads/">Offical download url</a>.</p><p><strong>Note</strong> make sure you have checked SHA256.</p><h2>#0x02 Write kali live into USB</h2>
-<p>The easiest way to write a kali live image is using <a href="https://rufus.ie/">rufus</a> to write into your thumb drive.</p><p><strong>Note</strong> leave enough space for boot.
-E.g. you have a 32GB USB and download a 3GB kali live image, then you should leave 3-4GB for boot and anthor part for your kali live persistence.</p><p>If you want encrypted persistence, refer to <a href="https://www.kali.org/docs/usb/kali-linux-live-usb-persistence/#:~:text=The%20persistent%20data%20is%20stored,article%20will%20show%20you%20how.">Adding Persistence to a Kali Linux &quot;Live&quot; USB Drive</a>.</p><h2>#0x03 Install nvidia dirver and cuda</h2>
-<p>If you want nvidia graphics card enabled, make sure #nouveau# is <strong>down</strong> when you install nvidia driver.</p><p>#1 You can change  UUI /boot/grub/grub.cfg
-e.g. F:\boot\grub\grub.cfg (F is my USB). Add parameter #nouveau.modeset=0# under persistance section at the end of the line, after editation it should look like this:</p>
-<pre><code>menuentry &quot;Live system (persistence, check kali.org/prst)&quot; {
-linux /live/vmlinuz-5.6.7-kali3-amd64 boot=live components splash username=root hostname=kali persistence nouveau.modeset=0
-initrd /live/initrd.img-5.6.7-kali3-amd64
-</code></pre>
-<p><strong>Note</strong> select kali persistence to boot.</p><p>#2 Once you have that ready boot to your kali persistence.</p><div class="highlight"><pre><span></span>apt-get update <span class="o">&amp;&amp;</span> apt-get upgrade -y <span class="o">&amp;&amp;</span> apt-get dist-upgrade –y
-apt-get install linux-headers-<span class="k">$(</span>uname -r<span class="k">)</span> –y
-reboot
-</pre></div>
-<p>#3 Now you should see that Kali booted into low resolution login screen. Login and type in terminal:</p><p><strong>init 3</strong> (will exit GUI and help nvidia drivers to install correctly)</p><div class="highlight"><pre><span></span>apt-get install -y ocl-icd-libopencl1 nvidia-driver nvidia-cuda-toolkit
-</pre></div>
-<p>Once this is done reboot and you should have USB bootable pendrive with NVIDIA drivers running.
-You can verify that with nvidia-smi command, also I need to mention that this worked for me even without updating initramfs (update-initramfs.distrib -u).</p><h2>#0x04 Post installation</h2>
-<p>Ref.</p><p><a href="https://github.com/leonetolesano/custom-kali-tutorial/wiki/0x03-Post-install-for-Live-USB-persistent">Post install for Live USB persistent</a></p><p><a href="https://www.fossmint.com/things-to-do-after-installing-kali-linux/">The First 10 Things to Do After Installing Kali Linux</a></p><p>enjoy :)</p>
-            </div>
-        </article>
-        <div id="ga-tags">
     
-    <span class="ga-tag">
-        <a class="ga-highlight" href="/tag/Kali%20live%20persistence/">#Kali live persistence</a>
-    </span>
-    
-</div>
-    </section>
 
-    
-<section id="ga-content_pager">
-
-    <div class="next">
-        <a class="ga-highlight" href="/archives/about-blog/">关于博客</a>
-        <p class="yue">about this blog</p>
-    </div>
-
-
-    <div class="prev">
-        <a class="ga-highlight" href="/archives/Pynamer_CN/">Pynamer_CN</a>
-        <p class="yue">a simple Chinese full name generator</p>
-    </div>
-
+<section id="ga-archive_list" class="ga-section" data-title="#pics">
+    <ul>
+        
+        <li>
+            <h1><a target="_self" class="ga-highlight" href="/archives/awesome-dl-pics/">Awesome pics of DL</a></h1>
+            <time class="ga-mono" datetime="2020-10-05T17:20:00-00.00">
+                2020-10-05
+            </time>
+        </li>
+        
+    </ul>
 </section>
 
-
+<section class="ga-section ga-mono" id="ga-pager">
     
+    <span>Page 1 of 1</span>
+    
+</section>
+
 
 </main>
 
