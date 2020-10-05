@@ -12,7 +12,7 @@ tags:
   - theme
 ---
 ヘッドセット癌の中期患者
-- Bloger 0.001x
+- Blogger 0.001x
 - Geek 0.01x
 
 
