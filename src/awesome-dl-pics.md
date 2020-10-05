@@ -17,4 +17,5 @@ excerpt: some useful pics of DL
 ![CV-evolutions-minor](./pics/CV-evolutions-minor.jpg)
 ![CV-evolutions](./pics/CV-evolutions.jpg)
 ![algorithm-map](./pics/algorithm-map.png)
-- [ ] to be continue
+
+*   to be continue
