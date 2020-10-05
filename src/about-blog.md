@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 关于博客
-slug: 2020-04-19-test
+slug: about-blog
 date: 2020-10-05 14:54
 status: publish
 author: CrazyDogen
