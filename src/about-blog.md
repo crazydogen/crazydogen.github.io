@@ -6,7 +6,6 @@ date: 2020-10-05 14:54
 status: publish
 author: CrazyDogen
 categories: 
-  - default
   - Thoughts
 tags: 
   - blog
