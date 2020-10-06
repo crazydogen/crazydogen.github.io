@@ -17,5 +17,5 @@ excerpt: some useful pics of DL
 ![CV-evolutions-minor](./pics/CV-evolutions-minor.jpg)
 ![CV-evolutions](./pics/CV-evolutions.jpg)
 ![algorithm-map](./pics/algorithm-map.png)
-
+![Last-layer activation and loss function combinations](./pics/Last-layer activation and loss function combinations.png)
 *   to be continue
