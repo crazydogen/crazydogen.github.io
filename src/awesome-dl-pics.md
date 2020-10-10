@@ -19,4 +19,5 @@ excerpt: some useful pics of DL
 ![algorithm-map](./pics/algorithm-map.png)
 ![Last-layer activation and loss function combinations](./pics/Last-layer-activation-and-loss-function-combinations.png)
 ![SIGAI-content](./pics/SIGAI-content.jpg)
+![SIGAI-1.jpg](./pics/SIGAI-1.jpg)
 *   to be continue
