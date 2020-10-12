@@ -29,6 +29,6 @@ excerpt: some useful pics of ML & DL
 ![SIGAI-4](./pics/SIGAI-4.jpg)
 ![SIGAI-5](./pics/SIGAI-5.png)
 
-<iframe src="http://docs.google.com/gview?url=https://github.com/crazydogen/crazydogen.github.io/tree/master/src/pdfs/super-cheatsheet-deep-learning.pdf&embedded=true" style="width:300px; height:100px;" frameborder="0"></iframe>
+<iframe src="http://docs.google.com/gview?url=https://raw.githubusercontent.com/crazydogen/crazydogen.github.io/13d7ce2aefe1a233eaee6f93f25fbf9890ffbbc3/src/pdfs/super-cheatsheet-deep-learning.pdf&embedded=true" style="width:300px; height:100px;" frameborder="0"></iframe>
 
 *   to be continued
