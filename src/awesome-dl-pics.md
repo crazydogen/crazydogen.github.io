@@ -30,5 +30,12 @@ excerpt: some useful pics of ML & DL
 ![SIGAI-5](./pics/SIGAI-5.png)
 
 <center><embed src="./pdfs/picssuper-cheatsheet-deep-learning.pdf" width="850" height="600"></center>
+<dl>
+  <dt>Definition list</dt>
+  <dd>Is something people use sometimes.</dd>
+
+  <dt>Markdown in HTML</dt>
+  <dd>Does *not* work **very** well. Use HTML <em>tags</em>.</dd>
+</dl>
 
 *   to be continued
