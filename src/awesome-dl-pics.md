@@ -6,9 +6,11 @@ date: 2020-10-05 17:20
 status: publish
 author: CrazyDogen
 categories: 
-  - DeepLearning
+  - Deep Learning
+  - Machine Learning
 tags: 
-  - DeepLearning
+  - Deep Learning
+  - Machine Learning
   - pics
 excerpt: some useful pics of ML & DL
 ---
