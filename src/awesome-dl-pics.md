@@ -26,5 +26,4 @@ excerpt: some useful pics of DL
 ![SIGAI-3](./pics/SIGAI-3.jpg)
 ![SIGAI-4](./pics/SIGAI-4.jpg)
 ![SIGAI-5](./pics/SIGAI-5.png)
-<center><embed src="./pdf/Deep Learning Mind Map.pdf" width="850" height="600"></center>
 *   to be continued
