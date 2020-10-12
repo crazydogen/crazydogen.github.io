@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Awesome pics of DL
+title: Awesome pics of ML & DL
 slug: awesome-dl-pics
 date: 2020-10-05 17:20
 status: publish
@@ -10,7 +10,7 @@ categories:
 tags: 
   - DeepLearning
   - pics
-excerpt: some useful pics of DL
+excerpt: some useful pics of ML & DL
 ---
 
 ![2020-ml-roadmap-full](./pics/2020-ml-roadmap-full.png)
@@ -20,7 +20,7 @@ excerpt: some useful pics of DL
 ![Last-layer activation and loss function combinations](./pics/Last-layer-activation-and-loss-function-combinations.png)
 ## Algorithm Taxonomy
 ![SIGAI algorithm map](./pics/algorithm-map.png)
-![SIGAI-content](./pics/SIGAI-content.jpg)
+![SIGAI-DL map](./pics/SIGAI-content.jpg)
 ![SIGAI-1](./pics/SIGAI-1.jpg)
 ![SIGAI-2](./pics/SIGAI-2.jpg)
 ![SIGAI-3](./pics/SIGAI-3.jpg)
