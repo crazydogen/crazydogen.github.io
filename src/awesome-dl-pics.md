@@ -23,6 +23,6 @@ excerpt: some useful pics of DL
 ![SIGAI-2](./pics/SIGAI-2.jpg)
 ![SIGAI-3](./pics/SIGAI-3.jpg)
 ![SIGAI-4](./pics/SIGAI-4.jpg)
-![SIGAI-5](./pics/SIGAI-5.jpg)
+![SIGAI-5](./pics/SIGAI-5.png)
 ![Object Detection](./pics/ObjectDetection.jpg)
 *   to be continued
