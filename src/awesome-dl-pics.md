@@ -18,6 +18,7 @@ excerpt: some useful pics of DL
 ![CV-evolutions-minor](./pics/CV-evolutions-minor.jpg)
 ![CV-evolutions](./pics/CV-evolutions.jpg)
 ![Last-layer activation and loss function combinations](./pics/Last-layer-activation-and-loss-function-combinations.png)
+## Algorithm Taxonomy
 ![SIGAI algorithm map](./pics/algorithm-map.png)
 ![SIGAI-content](./pics/SIGAI-content.jpg)
 ![SIGAI-1](./pics/SIGAI-1.jpg)
@@ -25,5 +26,5 @@ excerpt: some useful pics of DL
 ![SIGAI-3](./pics/SIGAI-3.jpg)
 ![SIGAI-4](./pics/SIGAI-4.jpg)
 ![SIGAI-5](./pics/SIGAI-5.png)
-
+<center><embed src="./pdf/Deep Learning Mind Map.pdf" width="850" height="600"></center>
 *   to be continued
