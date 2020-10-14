@@ -28,6 +28,5 @@ excerpt: some useful pics of ML & DL
 ![SIGAI-3](./pics/SIGAI-3.jpg)
 ![SIGAI-4](./pics/SIGAI-4.jpg)
 ![SIGAI-5](./pics/SIGAI-5.png)
-
-
+![Loss functions](./pics/loss.png)
 *   to be continued
