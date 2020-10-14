@@ -19,7 +19,8 @@ excerpt: some useful pics of ML & DL
 ![Object Detection](./pics/ObjectDetection.jpg)
 ![CV-evolutions-minor](./pics/CV-evolutions-minor.jpg)
 ![CV-evolutions](./pics/CV-evolutions.jpg)
-![Loss functions](./pics/loss.png)
+## Loss Functions
+![Loss functionsof classification and regression](./pics/loss.png)
 ![Last-layer activation and loss function combinations](./pics/Last-layer-activation-and-loss-function-combinations.png)
 ## Algorithm Taxonomy
 ![SIGAI algorithm map](./pics/algorithm-map.png)
