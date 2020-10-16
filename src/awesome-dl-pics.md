@@ -19,6 +19,7 @@ excerpt: some useful pics of ML & DL
 ![Object Detection](./pics/ObjectDetection.jpg)
 ![CV-evolutions-minor](./pics/CV-evolutions-minor.jpg)
 ![CV-evolutions](./pics/CV-evolutions.jpg)
+![Classification Metrics](./pics/Classification-Metrics.png)
 ## Loss Functions
 ![Loss functionsof classification and regression](./pics/loss.png)
 ![Last-layer activation and loss function combinations](./pics/Last-layer-activation-and-loss-function-combinations.png)
