@@ -12,7 +12,7 @@ tags:
   - Computer Science
   - Deep Learning
   - pdfs
-excerpt: some useful pdfs of CS
+excerpt: some useful pdfs of CS & DL
 ---
 
 [Here](https://github.com/crazydogen/crazydogen.github.io/tree/master/src/pdfs)
