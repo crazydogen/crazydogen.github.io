@@ -19,6 +19,6 @@ excerpt: some useful pdfs of CS & DL
 
 ![OSI7-TCP/IP](./pics/OSI7-TCPorIP.jpg)
 ![ASCII](./pics/ASCII字符代码表.jpg)
-![Linux Performance Obersevability Tools](./pics/Linux%20Performance%20Obersevability%20Tools.jpg)
+![Linux Performance Obersevability Tools](./pics/Linux-Performance-Obersevability-Tools.jpg)
 ![VIM Keyboard Map](./pics/VIM键盘图.jpg)
-![Overview of math.png](./pics/overview%20of%20math.png)
+![Overview of math.png](./pics/overview-of-math.png)
