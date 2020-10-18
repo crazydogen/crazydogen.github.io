@@ -16,3 +16,7 @@ excerpt: some useful pdfs of CS & DL
 ---
 
 [Here](https://github.com/crazydogen/crazydogen.github.io/tree/master/src/pdfs)
+
+![OSI7-TCP/IP](./src/pics/OSI7-TCPorIP.jpg)
+![ASCII](./src/pics/ASCII字符代码表.jpg)
+![Linux Performance Obersevability Tools](./src/pics/Linux%20Performance%20Obersevability%20Tools.jpg)
