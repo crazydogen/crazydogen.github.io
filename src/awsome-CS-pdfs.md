@@ -21,4 +21,4 @@ excerpt: some useful pdfs of CS & DL
 ![ASCII](./pics/ASCII字符代码表.jpg)
 ![Linux Performance Obersevability Tools](./pics/Linux-Performance-Obersevability-Tools.jpg)
 ![VIM Keyboard Map](./pics/VIM键盘图.jpg)
-![Overview of math.png](./pics/overview-of-math.png)
+![Overview of math](./pics/overview-of-math.png)
