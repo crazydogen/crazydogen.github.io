@@ -15,7 +15,7 @@ tags:
 excerpt: some useful pdfs of CS & DL
 ---
 
-[Here](https://github.com/crazydogen/crazydogen.github.io/tree/master/src/pdfs)
+[Pdfs can be found here](https://github.com/crazydogen/crazydogen.github.io/tree/master/src/pdfs)
 ## Some additional pics
 ![OSI7-TCP/IP](./pics/OSI7-TCPorIP.jpg)
 ![ASCII](./pics/ASCII字符代码表.jpg)
