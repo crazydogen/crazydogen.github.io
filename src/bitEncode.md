@@ -7,9 +7,9 @@ status: publish
 author: CrazyDogen
 categories: 
   - Thoughts
-  - Computer Science
 tags: 
   - +1&-1 operations in bit encode
+  - Computer Science
   - Python
 excerpt: some thoughts about bit encode
 ---
