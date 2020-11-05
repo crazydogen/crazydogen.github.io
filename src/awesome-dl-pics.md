@@ -7,7 +7,6 @@ status: publish
 author: CrazyDogen
 categories: 
   - Deep Learning
-  - Machine Learning
 tags: 
   - Deep Learning
   - Machine Learning
