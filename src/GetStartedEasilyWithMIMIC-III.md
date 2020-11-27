@@ -13,6 +13,8 @@ tags:
 excerpt: Quick Start of MIMIC-III
 ---
 
+
+
 ### Working with the MIMIC-III database using Structured Query Language 
 
 Before working with the MIMIC-III DB, you have to **be familiar with** basic SQL usage.
