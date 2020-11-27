@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>0x262f</title><link>/</link><description>Everything's a trade-off——avoid unnecessary work, think more to do less.</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://cdn.jsdelivr.net/gh/crazydogen/crazydogen.github.io@gh-pages/logo.png</url><title>0x262f</title><link>/</link></image><language>en</language><lastBuildDate>Fri, 27 Nov 2020 05:37:31 +0806</lastBuildDate><pubDate>Fri, 27 Nov 2020 05:37:31 +0806</pubDate><item><title>test</title><link>/archives/2020-04-19-test/</link><description>&lt;ul&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>0x262f</title><link>/</link><description>Everything's a trade-off——avoid unnecessary work, think more to do less.</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://cdn.jsdelivr.net/gh/crazydogen/crazydogen.github.io@gh-pages/logo.png</url><title>0x262f</title><link>/</link></image><language>en</language><lastBuildDate>Fri, 27 Nov 2020 09:23:45 +0806</lastBuildDate><pubDate>Fri, 27 Nov 2020 09:23:45 +0806</pubDate><item><title>test</title><link>/archives/2020-04-19-test/</link><description>&lt;ul&gt;
 &lt;li&gt;0x01&lt;/li&gt;
 &lt;/ul&gt;
 </description><author>ZVd4cE1USXhNaU52ZFhSc2IyOXJMbU52YlE9PQ== (CrazyDogen)</author><guid isPermaLink="true">/archives/2020-04-19-test/</guid><pubDate>Sun, 19 Apr 2020 14:54:00 +0806</pubDate></item><item><title>Pynamer_CN</title><link>/archives/Pynamer_CN/</link><description>&lt;p&gt;A simple Chinese full name generator based on the TOP102 Chinese surname and pinyin first name.&lt;/p&gt;&lt;h2&gt;What is pynamer_CN?&lt;/h2&gt;
@@ -199,79 +199,121 @@ You can verify that with nvidia-smi command, also I need to mention that this wo
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/li&gt;
 &lt;li&gt;&lt;p&gt;Categorized Inquiry of Patient Vital Signs&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt; select
- ce.subject_id, ce.hadm_id, ce.icustay_id,
- case
-     when itemid in (211,220045) and valuenum &amp;gt; 0 and valuenum &amp;lt; 300 then 1 -- HeartRate 心率
-     when itemid in (51,442,455,6701,220179,220050) and valuenum &amp;gt; 0 and valuenum &amp;lt; 400 then 2 -- SysBP 
-     when itemid in (8368,8440,8441,8555,220180,220051) and valuenum &amp;gt; 0 and valuenum &amp;lt; 300 then 3 -- DiasBP 
-     when itemid in (456,52,6702,443,220052,220181,225312) and valuenum &amp;gt; 0 and valuenum &amp;lt; 300 then 4 -- MeanBP 
-     when itemid in (615,618,220210,224690) and valuenum &amp;gt; 0 and valuenum &amp;lt; 70 then 5 -- RespRate 呼吸率
-     when itemid in (223761,678) and valuenum &amp;gt; 70 and valuenum &amp;lt; 120  then 6 -- TempF, converted to degC in valuenum call 华氏度体温，将转为摄氏度
-     when itemid in (223762,676) and valuenum &amp;gt; 10 and valuenum &amp;lt; 50  then 6 -- TempC 摄氏度体温
-     when itemid in (646,220277) and valuenum &amp;gt; 0 and valuenum &amp;lt;= 100 then 7 -- SpO2 血氧饱和度
-     when itemid in (807,811,1529,3745,3744,225664,220621,226537) and valuenum &amp;gt; 0 then 8 -- Glucose 血糖
+&lt;pre&gt;&lt;code&gt; SELECT pvt.subject_id, pvt.hadm_id, pvt.icustay_id
+
+ -- Easier names
+ , min(case when VitalID = 1 then valuenum ELSE NULL END) AS heartrate_min
+ , max(case when VitalID = 1 then valuenum ELSE NULL END) AS heartrate_max
+ , avg(case when VitalID = 1 then valuenum ELSE NULL END) AS heartrate_mean
+ , min(case when VitalID = 2 then valuenum ELSE NULL END) AS sysbp_min
+ , max(case when VitalID = 2 then valuenum ELSE NULL END) AS sysbp_max
+ , avg(case when VitalID = 2 then valuenum ELSE NULL END) AS sysbp_mean
+ , min(case when VitalID = 3 then valuenum ELSE NULL END) AS diasbp_min
+ , max(case when VitalID = 3 then valuenum ELSE NULL END) AS diasbp_max
+ , avg(case when VitalID = 3 then valuenum ELSE NULL END) AS diasbp_mean
+ , min(case when VitalID = 4 then valuenum ELSE NULL END) AS meanbp_min
+ , max(case when VitalID = 4 then valuenum ELSE NULL END) AS meanbp_max
+ , avg(case when VitalID = 4 then valuenum ELSE NULL END) AS meanbp_mean
+ , min(case when VitalID = 5 then valuenum ELSE NULL END) AS resprate_min
+ , max(case when VitalID = 5 then valuenum ELSE NULL END) AS resprate_max
+ , avg(case when VitalID = 5 then valuenum ELSE NULL END) AS resprate_mean
+ , min(case when VitalID = 6 then valuenum ELSE NULL END) AS tempc_min
+ , max(case when VitalID = 6 then valuenum ELSE NULL END) AS tempc_max
+ , avg(case when VitalID = 6 then valuenum ELSE NULL END) AS tempc_mean
+ , min(case when VitalID = 7 then valuenum ELSE NULL END) AS spo2_min
+ , max(case when VitalID = 7 then valuenum ELSE NULL END) AS spo2_max
+ , avg(case when VitalID = 7 then valuenum ELSE NULL END) AS spo2_mean
+ , min(case when VitalID = 8 then valuenum ELSE NULL END) AS glucose_min
+ , max(case when VitalID = 8 then valuenum ELSE NULL END) AS glucose_max
+ , avg(case when VitalID = 8 then valuenum ELSE NULL END) AS glucose_mean
+
+ FROM  (
+ select ie.subject_id, ie.hadm_id, ie.icustay_id
+ , case
+     when itemid in (211,220045) and valuenum &amp;gt; 0 and valuenum &amp;lt; 300 then 1 -- HeartRate
+     when itemid in (51,442,455,6701,220179,220050) and valuenum &amp;gt; 0 and valuenum &amp;lt; 400 then 2 -- SysBP
+     when itemid in (8368,8440,8441,8555,220180,220051) and valuenum &amp;gt; 0 and valuenum &amp;lt; 300 then 3 -- DiasBP
+     when itemid in (456,52,6702,443,220052,220181,225312) and valuenum &amp;gt; 0 and valuenum &amp;lt; 300 then 4 -- MeanBP
+     when itemid in (615,618,220210,224690) and valuenum &amp;gt; 0 and valuenum &amp;lt; 70 then 5 -- RespRate
+     when itemid in (223761,678) and valuenum &amp;gt; 70 and valuenum &amp;lt; 120  then 6 -- TempF, converted to degC in valuenum call
+     when itemid in (223762,676) and valuenum &amp;gt; 10 and valuenum &amp;lt; 50  then 6 -- TempC
+     when itemid in (646,220277) and valuenum &amp;gt; 0 and valuenum &amp;lt;= 100 then 7 -- SpO2
+     when itemid in (807,811,1529,3745,3744,225664,220621,226537) and valuenum &amp;gt; 0 then 8 -- Glucose
+
      else null end as vitalid
      -- convert F to C
  , case when itemid in (223761,678) then (valuenum-32)/1.8 else valuenum end as valuenum
 
- from mimiciii.chartevents ce
+ from mimiciii.icustays ie
+ left join mimiciii.chartevents ce
+ on ie.icustay_id = ce.icustay_id
+ -- and ce.charttime between ie.intime and DATETIME_ADD(ie.intime, INTERVAL '1' DAY)
+ -- and DATETIME_DIFF(ce.charttime, ie.intime, SECOND) &amp;gt; 0
+ -- and DATETIME_DIFF(ce.charttime, ie.intime, HOUR) &amp;lt;= 24
+ -- exclude rows marked as error
+ and (ce.error IS NULL or ce.error = 0)
  where ce.itemid in
  (
- -- HEART RATE 心率
+ -- HEART RATE
  211, --&amp;quot;Heart Rate&amp;quot;
  220045, --&amp;quot;Heart Rate&amp;quot;
 
- -- Systolic/diastolic 收缩压/舒张压
- 51, --	Arterial BP [Systolic] 动脉压收缩压
- 442, --	Manual BP [Systolic] 手动测量血压收缩压
- 455, --	NBP [Systolic] 无创血压收缩压
- 6701, --	Arterial BP #2 [Systolic] 动脉压 #2 收缩压
- 220179, --	Non Invasive Blood Pressure systolic 无创血压收缩压
- 220050, --	Arterial Blood Pressure systolic 动脉压收缩压
+ -- Systolic/diastolic
 
- 8368, --	Arterial BP [Diastolic] 动脉压舒张压
- 8440, --	Manual BP [Diastolic] 手动测量血压舒张压
- 8441, --	NBP [Diastolic] 无创血压舒张压
- 8555, --	Arterial BP #2 [Diastolic] 动脉压 #2 舒张压
- 220180, --	Non Invasive Blood Pressure diastolic	 无创血压舒张压
- 220051, --	Arterial Blood Pressure diastolic 动脉压舒张压
+ 51, --	Arterial BP [Systolic]
+ 442, --	Manual BP [Systolic]
+ 455, --	NBP [Systolic]
+ 6701, --	Arterial BP #2 [Systolic]
+ 220179, --	Non Invasive Blood Pressure systolic
+ 220050, --	Arterial Blood Pressure systolic
 
- -- MEAN ARTERIAL PRESSURE 平均压
- 456, --&amp;quot;NBP Mean&amp;quot; 无创血压平均压
- 52, --&amp;quot;Arterial BP Mean&amp;quot; 动脉压平均压
- 6702, --	Arterial BP Mean #2  动脉压平均压 #2
- 443, --	Manual BP Mean(calc) 手动测试血压平均压（计算）
- 220052, --&amp;quot;Arterial Blood Pressure mean&amp;quot; 动脉压平均压
- 220181, --&amp;quot;Non Invasive Blood Pressure mean&amp;quot; 无创血压平均压
- 225312, --&amp;quot;ART BP mean&amp;quot; 动脉压平均压
+ 8368, --	Arterial BP [Diastolic]
+ 8440, --	Manual BP [Diastolic]
+ 8441, --	NBP [Diastolic]
+ 8555, --	Arterial BP #2 [Diastolic]
+ 220180, --	Non Invasive Blood Pressure diastolic
+ 220051, --	Arterial Blood Pressure diastolic
 
- -- RESPIRATORY RATE 呼吸率
- 618,--	Respiratory Rate 呼吸率
- 615,--	Resp Rate (Total) 呼吸率（总）
- 220210,--	Respiratory Rate 呼吸率
- 224690, --	Respiratory Rate (Total) 呼吸率（总）
 
- -- SPO2, peripheral 血氧饱和度 体外测量
+ -- MEAN ARTERIAL PRESSURE
+ 456, --&amp;quot;NBP Mean&amp;quot;
+ 52, --&amp;quot;Arterial BP Mean&amp;quot;
+ 6702, --	Arterial BP Mean #2
+ 443, --	Manual BP Mean(calc)
+ 220052, --&amp;quot;Arterial Blood Pressure mean&amp;quot;
+ 220181, --&amp;quot;Non Invasive Blood Pressure mean&amp;quot;
+ 225312, --&amp;quot;ART BP mean&amp;quot;
+
+ -- RESPIRATORY RATE
+ 618,--	Respiratory Rate
+ 615,--	Resp Rate (Total)
+ 220210,--	Respiratory Rate
+ 224690, --	Respiratory Rate (Total)
+
+
+ -- SPO2, peripheral
  646, 220277,
 
- -- GLUCOSE, both lab and fingerstick 血糖
- 807,--	Fingerstick Glucose 指尖血糖
- 811,--	Glucose (70-105) 血糖
- 1529,--	Glucose 血糖
- 3745,--	BloodGlucose 血糖
- 3744,--	Blood Glucose 血糖
- 225664,--	Glucose finger stick 指尖血糖
- 220621,--	Glucose (serum) 血糖（血清）
- 226537,--	Glucose (whole blood) 血糖（全血）
+ -- GLUCOSE, both lab and fingerstick
+ 807,--	Fingerstick Glucose
+ 811,--	Glucose (70-105)
+ 1529,--	Glucose
+ 3745,--	BloodGlucose
+ 3744,--	Blood Glucose
+ 225664,--	Glucose finger stick
+ 220621,--	Glucose (serum)
+ 226537,--	Glucose (whole blood)
 
- -- TEMPERATURE 体温
- 223762, -- &amp;quot;Temperature Celsius&amp;quot; 体温（摄氏度）
- 676,	-- &amp;quot;Temperature C&amp;quot; 体温（摄氏度）
- 223761, -- &amp;quot;Temperature Fahrenheit&amp;quot; 体温（华氏度）
- 678 --	&amp;quot;Temperature F&amp;quot; 体温（华氏度）
+ -- TEMPERATURE
+ 223762, -- &amp;quot;Temperature Celsius&amp;quot;
+ 676,	-- &amp;quot;Temperature C&amp;quot;
+ 223761, -- &amp;quot;Temperature Fahrenheit&amp;quot;
+ 678 --	&amp;quot;Temperature F&amp;quot;
+
  )
- limit 2000
+ ) pvt 
+ group by pvt.subject_id, pvt.hadm_id, pvt.icustay_id
+ order by pvt.subject_id, pvt.hadm_id, pvt.icustay_id;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;a href="https://mimic.physionet.org/tutorials/intro-to-mimic-iii/"&gt;Click me to get more templates&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
 &lt;/ul&gt;
