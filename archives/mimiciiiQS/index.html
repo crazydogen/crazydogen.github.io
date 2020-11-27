@@ -1,0 +1,370 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="CrazyDogen,blog" />
+    <meta name="generator" content="Maverick 1.1" />
+    <meta name="template" content="Galileo" />
+    <link rel="alternate" type="application/rss+xml" title="0x262f &raquo; RSS 2.0" href="/feed/index.xml" />
+    <link rel="alternate" type="application/atom+xml" title="0x262f &raquo; ATOM 1.0" href="/feed/atom/index.xml" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/crazydogen/crazydogen.github.io@gh-pages/assets/galileo-8d8763e752.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/crazydogen/crazydogen.github.io@gh-pages/assets/ExSearch/ExSearch-182e5a8868.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/crazydogen/crazydogen.github.io@gh-pages/assets/katex.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Code&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700&display=swap">
+    <script>
+        var ExSearchConfig = {
+            root: "",
+            api: "https://cdn.jsdelivr.net/gh/crazydogen/crazydogen.github.io@gh-pages/9f41a36c929130df8019c4960f70c0a4.json"
+        }
+    </script>
+    
+<title>Getting started easily with the MIMIC-III DB - 0x262f</title>
+<meta name="author" content="CrazyDogen" />
+<meta name="description" content="Quick Start of MIMIC-III" />
+<meta property="og:title" content="Getting started easily with the MIMIC-III DB - 0x262f" />
+<meta property="og:description" content="Quick Start of MIMIC-III" />
+<meta property="og:site_name" content="0x262f" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/archives/mimiciiiQS/" />
+<meta property="og:image" content="" />
+<meta property="article:published_time" content="2020-11-27T11:20:00-00.00" />
+<meta name="twitter:title" content="Getting started easily with the MIMIC-III DB - 0x262f" />
+<meta name="twitter:description" content="Quick Start of MIMIC-III" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="" />
+
+
+    
+<meta name="google-site-verification" content="KC8Dz5CO0_r1vT128FTo6CCk-pRkf7wszo0SNRiPyqk" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+<link href='https://fonts.googleapis.com/css?family=Nunito Sans' rel='stylesheet'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
+
+    </head>
+    
+    <body>
+        
+        <div class="container">
+            <header id="ga-header">
+                <div first>
+                    <aside id="ga-brand">
+                        <h1 class="brand"><a class="no-style" href="/">0x262f</a></h1>
+                        <p>Everything's a trade-off——avoid unnecessary work, think more to do less.</p>
+                    </aside>
+                </div>
+                <div second id="ga-nav">
+                    <nav class="navs">
+                        <ul><li><a class="ga-highlight" href="/" target="_self">Home</a></li><span class="separator">·</span><li><a class="ga-highlight" href="/archives/" target="_self">Archived</a></li><span class="separator">·</span><li><a class="ga-highlight" href="/about/" target="_self">About</a></li><span class="separator">·</span><li><a href="#" target="_self" class="search-form-input ga-highlight">Search</a></li></ul>
+                    </nav>
+                </div>
+            </header>
+            <div class="wrapper">
+                
+<main>    
+    <section class="ga-section ga-content">
+        <article class="yue">
+            <h1 class="ga-post_title">Getting started easily with the MIMIC-III DB</h1>
+            <span class="ga-post_meta ga-mono">
+                <span>CrazyDogen</span>
+                <time>
+                    2020-11-27
+                </time>
+                
+                in <a no-style class="category" href="/category/Thoughts/">
+                    Thoughts
+                </a>
+                
+                
+            </span>
+            <div class="ga-content_body">
+                <h3>Working with the MIMIC-III database using Structured Query Language</h3>
+<hr />
+<p>Before working with the MIMIC-III DB, you have to <strong>be familiar with</strong> basic SQL usage.</p><ul>
+<li><a href="https://github.com/MIT-LCP/mimic-code/blob/master/tutorials/sql-intro.md">Here is an offical tutorial from MIT-LCP</a></li>
+<li><a href="https://www.runoob.com/sql/sql-quickref.html">Runoob's cheatsheet</a></li>
+<li><a href="https://www.w3schools.com/sql/">W3schools' SQL Tutorial</a></li>
+</ul>
+<h3>Overview of the MIMIC-III data</h3>
+<ul>
+<li><a href="https://mimic.physionet.org/gettingstarted/overview/">Offical Description</a></li>
+</ul>
+<figure style="flex: 8.806204594541528" ><img loading="lazy" width="897" height="5093" src="https://mit-lcp.github.io/mimic-schema-spy/diagrams/summary/relationships.real.large.png" /><figcaption>Full Schema</figcaption></figure><h3>Bonus: Some query templates</h3>
+<ul>
+<li><p>Metadata for a particular table (admissions in this example)</p>
+<pre><code> \d+ MIMICIII.ADMISSIONS
+</code></pre>
+</li>
+<li><p>Total patients</p>
+<pre><code> SELECT COUNT(*)
+ FROM patients;
+</code></pre>
+</li>
+<li><p>subject_id hadm_id icustay_id(10 items) from icustays</p>
+<pre><code> SELECT subject_id, hadm_id, icustay_id 
+ FROM icustays
+ LIMIT 10
+</code></pre>
+</li>
+<li><p>The numbers of male and female patients</p>
+<pre><code> SELECT gender, COUNT(*)
+ FROM patients
+ GROUP BY gender;
+</code></pre>
+</li>
+<li><p>Count the number of patients who died</p>
+<pre><code> SELECT expire_flag, COUNT(*)
+ FROM patients
+ GROUP BY expire_flag;
+</code></pre>
+</li>
+<li><p>Patient age and mortality</p>
+<pre><code> WITH first_admission_time AS
+ (
+ SELECT
+     p.subject_id, p.dob, p.gender
+     , MIN (a.admittime) AS first_admittime
+     , MIN( ROUND( (cast(admittime as date) - cast(dob as date)) / 365.242,2) )
+         AS first_admit_age
+ FROM patients p
+ INNER JOIN admissions a
+ ON p.subject_id = a.subject_id
+ GROUP BY p.subject_id, p.dob, p.gender
+ ORDER BY p.subject_id
+ )
+ SELECT
+     subject_id, dob, gender
+     , first_admittime, first_admit_age
+     , CASE
+         -- all ages &gt; 89 in the database were replaced with 300
+         WHEN first_admit_age &gt; 89
+             then '&gt;89'
+         WHEN first_admit_age &gt;= 14
+             THEN 'adult'
+         WHEN first_admit_age &lt;= 1
+             THEN 'neonate'
+         ELSE 'middle'
+         END AS age_group
+ FROM first_admission_time
+ ORDER BY subject_id
+</code></pre>
+</li>
+<li><p>How many of deaths occurred within the ICU</p>
+<pre><code> SELECT ie.subject_id, ie.hadm_id, ie.icustay_id,
+     ie.intime, ie.outtime, adm.deathtime,
+     ROUND((cast(ie.intime as date) - cast(pat.dob as date))/365.242, 2) AS age,
+     ROUND((cast(ie.intime as date) - cast(adm.admittime as date))/365.242, 2) AS preiculos,
+     CASE
+         WHEN ROUND((cast(ie.intime as date) - cast(pat.dob as date))/365.242, 2) &lt;= 1
+             THEN 'neonate'
+         WHEN ROUND((cast(ie.intime as date) - cast(pat.dob as date))/365.242, 2) &lt;= 14
+             THEN 'middle'
+         -- all ages &gt; 89 in the database were replaced with 300
+         WHEN ROUND((cast(ie.intime as date) - cast(pat.dob as date))/365.242, 2) &gt; 100
+             THEN '&gt;89'
+         ELSE 'adult'
+         END AS ICUSTAY_AGE_GROUP,
+     -- note that there is already a &quot;hospital_expire_flag&quot; field in the admissions table which you could use
+     CASE
+         WHEN adm.hospital_expire_flag = 1 then 'Y'           
+     ELSE 'N'
+     END AS hospital_expire_flag,
+     -- note also that hospital_expire_flag is equivalent to &quot;Is adm.deathtime not null?&quot;
+     CASE
+         WHEN adm.deathtime BETWEEN ie.intime and ie.outtime
+             THEN 'Y'
+         -- sometimes there are typographical errors in the death date, so check before intime
+         WHEN adm.deathtime &lt;= ie.intime
+             THEN 'Y'
+         WHEN adm.dischtime &lt;= ie.outtime
+             AND adm.discharge_location = 'DEAD/EXPIRED'
+             THEN 'Y'
+         ELSE 'N'
+         END AS ICUSTAY_EXPIRE_FLAG
+ FROM icustays ie
+ INNER JOIN patients pat
+ ON ie.subject_id = pat.subject_id
+ INNER JOIN admissions adm
+ ON ie.hadm_id = adm.hadm_id;
+</code></pre>
+</li>
+<li><p>Categorized Inquiry of Patient Vital Signs</p>
+<pre><code> select
+ ce.subject_id, ce.hadm_id, ce.icustay_id,
+ case
+     when itemid in (211,220045) and valuenum &gt; 0 and valuenum &lt; 300 then 1 -- HeartRate 心率
+     when itemid in (51,442,455,6701,220179,220050) and valuenum &gt; 0 and valuenum &lt; 400 then 2 -- SysBP 
+     when itemid in (8368,8440,8441,8555,220180,220051) and valuenum &gt; 0 and valuenum &lt; 300 then 3 -- DiasBP 
+     when itemid in (456,52,6702,443,220052,220181,225312) and valuenum &gt; 0 and valuenum &lt; 300 then 4 -- MeanBP 
+     when itemid in (615,618,220210,224690) and valuenum &gt; 0 and valuenum &lt; 70 then 5 -- RespRate 呼吸率
+     when itemid in (223761,678) and valuenum &gt; 70 and valuenum &lt; 120  then 6 -- TempF, converted to degC in valuenum call 华氏度体温，将转为摄氏度
+     when itemid in (223762,676) and valuenum &gt; 10 and valuenum &lt; 50  then 6 -- TempC 摄氏度体温
+     when itemid in (646,220277) and valuenum &gt; 0 and valuenum &lt;= 100 then 7 -- SpO2 血氧饱和度
+     when itemid in (807,811,1529,3745,3744,225664,220621,226537) and valuenum &gt; 0 then 8 -- Glucose 血糖
+     else null end as vitalid
+     -- convert F to C
+ , case when itemid in (223761,678) then (valuenum-32)/1.8 else valuenum end as valuenum
+
+ from mimiciii.chartevents ce
+ where ce.itemid in
+ (
+ -- HEART RATE 心率
+ 211, --&quot;Heart Rate&quot;
+ 220045, --&quot;Heart Rate&quot;
+
+ -- Systolic/diastolic 收缩压/舒张压
+ 51, --	Arterial BP [Systolic] 动脉压收缩压
+ 442, --	Manual BP [Systolic] 手动测量血压收缩压
+ 455, --	NBP [Systolic] 无创血压收缩压
+ 6701, --	Arterial BP #2 [Systolic] 动脉压 #2 收缩压
+ 220179, --	Non Invasive Blood Pressure systolic 无创血压收缩压
+ 220050, --	Arterial Blood Pressure systolic 动脉压收缩压
+
+ 8368, --	Arterial BP [Diastolic] 动脉压舒张压
+ 8440, --	Manual BP [Diastolic] 手动测量血压舒张压
+ 8441, --	NBP [Diastolic] 无创血压舒张压
+ 8555, --	Arterial BP #2 [Diastolic] 动脉压 #2 舒张压
+ 220180, --	Non Invasive Blood Pressure diastolic	 无创血压舒张压
+ 220051, --	Arterial Blood Pressure diastolic 动脉压舒张压
+
+ -- MEAN ARTERIAL PRESSURE 平均压
+ 456, --&quot;NBP Mean&quot; 无创血压平均压
+ 52, --&quot;Arterial BP Mean&quot; 动脉压平均压
+ 6702, --	Arterial BP Mean #2  动脉压平均压 #2
+ 443, --	Manual BP Mean(calc) 手动测试血压平均压（计算）
+ 220052, --&quot;Arterial Blood Pressure mean&quot; 动脉压平均压
+ 220181, --&quot;Non Invasive Blood Pressure mean&quot; 无创血压平均压
+ 225312, --&quot;ART BP mean&quot; 动脉压平均压
+
+ -- RESPIRATORY RATE 呼吸率
+ 618,--	Respiratory Rate 呼吸率
+ 615,--	Resp Rate (Total) 呼吸率（总）
+ 220210,--	Respiratory Rate 呼吸率
+ 224690, --	Respiratory Rate (Total) 呼吸率（总）
+
+ -- SPO2, peripheral 血氧饱和度 体外测量
+ 646, 220277,
+
+ -- GLUCOSE, both lab and fingerstick 血糖
+ 807,--	Fingerstick Glucose 指尖血糖
+ 811,--	Glucose (70-105) 血糖
+ 1529,--	Glucose 血糖
+ 3745,--	BloodGlucose 血糖
+ 3744,--	Blood Glucose 血糖
+ 225664,--	Glucose finger stick 指尖血糖
+ 220621,--	Glucose (serum) 血糖（血清）
+ 226537,--	Glucose (whole blood) 血糖（全血）
+
+ -- TEMPERATURE 体温
+ 223762, -- &quot;Temperature Celsius&quot; 体温（摄氏度）
+ 676,	-- &quot;Temperature C&quot; 体温（摄氏度）
+ 223761, -- &quot;Temperature Fahrenheit&quot; 体温（华氏度）
+ 678 --	&quot;Temperature F&quot; 体温（华氏度）
+ )
+ limit 2000
+</code></pre>
+<p><a href="https://mimic.physionet.org/tutorials/intro-to-mimic-iii/">Click me to get more templates</a></p></li>
+</ul>
+<h3><strong>Quick Reference</strong></h3>
+<ul>
+<li><p><a href="https://mimic.physionet.org/mimictables/">MIMIC-III Tables</a></p></li>
+<li><p><a href="https://mimic.physionet.org/mimicdata/">MIMIC-III Data Details</a></p></li>
+<li><p><a href="https://mimic.physionet.org/tutorials/intro-to-mimic-iii/">Querying MIMIC-III</a></p></li>
+<li><p><a href="https://github.com/MIT-LCP/mimic-code">MIMIC Offical Code Repository</a></p></li>
+<li><p><a href="https://www.deepl.com/translator">DeepL</a> - AI based Translator</p><p><strong>SQL Tools</strong></p></li>
+<li><p><a href="https://www.psycopg.org/docs/usage.html#basic-module-usage">Psycopg</a> is the most popular PostgreSQL adapter for the <strong>Python</strong> programming language.</p></li>
+<li><p><a href="https://www.pgadmin.org/">pgAdmin</a> is the most popular and feature rich Open Source administration and development platform for PostgreSQL, the most advanced Open Source database in the world.</p></li>
+<li><p><a href="https://www.navicat.com/en/support/online-manual">Navicat</a> is a series of <strong>graphical</strong> database management and development software produced by CyberTech Ltd. for MySQL, MariaDB, MongoDB, Oracle, SQLite, PostgreSQL and Microsoft SQL Server.</p></li>
+<li><p><a href="https://dbeaver.com/docs/wiki/">Dbeaver</a> is a universal database management tool for everyone who needs to work with data in a professional way.</p></li>
+</ul>
+
+            </div>
+        </article>
+        <div id="ga-tags">
+    
+    <span class="ga-tag">
+        <a class="ga-highlight" href="/tag/MIMIC-III/">#MIMIC-III</a>
+    </span>
+    
+    <span class="ga-tag">
+        <a class="ga-highlight" href="/tag/SQL/">#SQL</a>
+    </span>
+    
+</div>
+    </section>
+
+    
+<section id="ga-content_pager">
+
+    <div class="next">
+        <h3>No More</h3>
+        <p class="yue">This is the latest one.</p>
+    </div>
+
+
+    <div class="prev">
+        <a class="ga-highlight" href="/archives/binEncode/">二进制 +1 -1迷思</a>
+        <p class="yue">some thoughts about bit encode</p>
+    </div>
+
+</section>
+
+
+    
+
+</main>
+
+                <footer class="ga-mono" id="ga-footer">
+                    <section>
+                        <span id="ga-uptime"></span>
+                        <span class="brand">0x262f</span>
+                    </section>
+                    <section>
+                        <p class="copyright">
+                            <span>Copyright © 2020 CrazyDogen</span>
+                            <span>Powered by <a no-style href="https://github.com/AlanDecode/Maverick" target="_blank">Maverick & Galileo</a></span>
+                        </p>
+                        <div class="copyright">
+                            <span class="footer-addon">
+                                
+                            </span>
+                            <nav class="social-links">
+                                <ul><li><a class="no-style" title="GitHub" href="https://github.com/crazydogen" target="_blank"><i class="fab fa-github"></i>GitHub</a></li></ul>
+                            </nav>
+                        </div>
+                    </section>
+                    <script>
+                        var site_build_date = "2020-04-19T14:51+08:00"
+                    </script>
+                    <script src="https://cdn.jsdelivr.net/gh/crazydogen/crazydogen.github.io@gh-pages/assets/galileo-7c8cea54ab.js"></script>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <!--katex-->
+    <script defer src="https://cdn.jsdelivr.net/gh/crazydogen/crazydogen.github.io@gh-pages/assets/katex.min.js"></script>
+    <script>
+    mathOpts = {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "\\[", right: "\\]", display: true},
+            {left: "$", right: "$", display: false},
+            {left: "\\(", right: "\\)", display: false}
+        ]
+    };
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/gh/crazydogen/crazydogen.github.io@gh-pages/assets/auto-render.min.js" onload="renderMathInElement(document.body, mathOpts);"></script>
+
+    <script src="https://cdn.jsdelivr.net/gh/crazydogen/crazydogen.github.io@gh-pages/assets/ExSearch/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/crazydogen/crazydogen.github.io@gh-pages/assets/ExSearch/ExSearch-493cb9cd89.js"></script>
+
+    
+    </body>
+</html>

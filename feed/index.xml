@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>0x262f</title><link>/</link><description>Everything's a trade-off——avoid unnecessary work, think more to do less.</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://cdn.jsdelivr.net/gh/crazydogen/crazydogen.github.io@gh-pages/logo.png</url><title>0x262f</title><link>/</link></image><language>en</language><lastBuildDate>Fri, 27 Nov 2020 05:25:05 +0806</lastBuildDate><pubDate>Fri, 27 Nov 2020 05:25:05 +0806</pubDate><item><title>test</title><link>/archives/2020-04-19-test/</link><description>&lt;ul&gt;
+<rss xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0"><channel><title>0x262f</title><link>/</link><description>Everything's a trade-off——avoid unnecessary work, think more to do less.</description><docs>http://www.rssboard.org/rss-specification</docs><generator>python-feedgen</generator><image><url>https://cdn.jsdelivr.net/gh/crazydogen/crazydogen.github.io@gh-pages/logo.png</url><title>0x262f</title><link>/</link></image><language>en</language><lastBuildDate>Fri, 27 Nov 2020 05:31:37 +0806</lastBuildDate><pubDate>Fri, 27 Nov 2020 05:31:37 +0806</pubDate><item><title>test</title><link>/archives/2020-04-19-test/</link><description>&lt;ul&gt;
 &lt;li&gt;0x01&lt;/li&gt;
 &lt;/ul&gt;
 </description><author>ZVd4cE1USXhNaU52ZFhSc2IyOXJMbU52YlE9PQ== (CrazyDogen)</author><guid isPermaLink="true">/archives/2020-04-19-test/</guid><pubDate>Sun, 19 Apr 2020 14:54:00 +0806</pubDate></item><item><title>Pynamer_CN</title><link>/archives/Pynamer_CN/</link><description>&lt;p&gt;A simple Chinese full name generator based on the TOP102 Chinese surname and pinyin first name.&lt;/p&gt;&lt;h2&gt;What is pynamer_CN?&lt;/h2&gt;
@@ -89,4 +89,203 @@ You can verify that with nvidia-smi command, also I need to mention that this wo
     &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
     &lt;span class="c1"&gt;# if signed int, int(s[1:], 2)- int(s[0]) * (1 &amp;lt;&amp;lt; 31)&lt;/span&gt;
 &lt;/pre&gt;&lt;/div&gt;
-</description><author>ZVd4cE1USXhNaU52ZFhSc2IyOXJMbU52YlE9PQ== (CrazyDogen)</author><guid isPermaLink="true">/archives/binEncode/</guid><pubDate>Wed, 04 Nov 2020 22:20:00 +0806</pubDate></item></channel></rss>
+</description><author>ZVd4cE1USXhNaU52ZFhSc2IyOXJMbU52YlE9PQ== (CrazyDogen)</author><guid isPermaLink="true">/archives/binEncode/</guid><pubDate>Wed, 04 Nov 2020 22:20:00 +0806</pubDate></item><item><title>Getting started easily with the MIMIC-III DB</title><link>/archives/mimiciiiQS/</link><description>&lt;h3&gt;Working with the MIMIC-III database using Structured Query Language&lt;/h3&gt;
+&lt;hr /&gt;
+&lt;p&gt;Before working with the MIMIC-III DB, you have to &lt;strong&gt;be familiar with&lt;/strong&gt; basic SQL usage.&lt;/p&gt;&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://github.com/MIT-LCP/mimic-code/blob/master/tutorials/sql-intro.md"&gt;Here is an offical tutorial from MIT-LCP&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.runoob.com/sql/sql-quickref.html"&gt;Runoob's cheatsheet&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://www.w3schools.com/sql/"&gt;W3schools' SQL Tutorial&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;Overview of the MIMIC-III data&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="https://mimic.physionet.org/gettingstarted/overview/"&gt;Offical Description&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;figure style="flex: 8.806204594541528" &gt;&lt;img loading="lazy" width="897" height="5093" src="https://mit-lcp.github.io/mimic-schema-spy/diagrams/summary/relationships.real.large.png" /&gt;&lt;figcaption&gt;Full Schema&lt;/figcaption&gt;&lt;/figure&gt;&lt;h3&gt;Bonus: Some query templates&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;Metadata for a particular table (admissions in this example)&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt; \d+ MIMICIII.ADMISSIONS
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Total patients&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt; SELECT COUNT(*)
+ FROM patients;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;subject_id hadm_id icustay_id(10 items) from icustays&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt; SELECT subject_id, hadm_id, icustay_id 
+ FROM icustays
+ LIMIT 10
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;The numbers of male and female patients&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt; SELECT gender, COUNT(*)
+ FROM patients
+ GROUP BY gender;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Count the number of patients who died&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt; SELECT expire_flag, COUNT(*)
+ FROM patients
+ GROUP BY expire_flag;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Patient age and mortality&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt; WITH first_admission_time AS
+ (
+ SELECT
+     p.subject_id, p.dob, p.gender
+     , MIN (a.admittime) AS first_admittime
+     , MIN( ROUND( (cast(admittime as date) - cast(dob as date)) / 365.242,2) )
+         AS first_admit_age
+ FROM patients p
+ INNER JOIN admissions a
+ ON p.subject_id = a.subject_id
+ GROUP BY p.subject_id, p.dob, p.gender
+ ORDER BY p.subject_id
+ )
+ SELECT
+     subject_id, dob, gender
+     , first_admittime, first_admit_age
+     , CASE
+         -- all ages &amp;gt; 89 in the database were replaced with 300
+         WHEN first_admit_age &amp;gt; 89
+             then '&amp;gt;89'
+         WHEN first_admit_age &amp;gt;= 14
+             THEN 'adult'
+         WHEN first_admit_age &amp;lt;= 1
+             THEN 'neonate'
+         ELSE 'middle'
+         END AS age_group
+ FROM first_admission_time
+ ORDER BY subject_id
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;How many of deaths occurred within the ICU&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt; SELECT ie.subject_id, ie.hadm_id, ie.icustay_id,
+     ie.intime, ie.outtime, adm.deathtime,
+     ROUND((cast(ie.intime as date) - cast(pat.dob as date))/365.242, 2) AS age,
+     ROUND((cast(ie.intime as date) - cast(adm.admittime as date))/365.242, 2) AS preiculos,
+     CASE
+         WHEN ROUND((cast(ie.intime as date) - cast(pat.dob as date))/365.242, 2) &amp;lt;= 1
+             THEN 'neonate'
+         WHEN ROUND((cast(ie.intime as date) - cast(pat.dob as date))/365.242, 2) &amp;lt;= 14
+             THEN 'middle'
+         -- all ages &amp;gt; 89 in the database were replaced with 300
+         WHEN ROUND((cast(ie.intime as date) - cast(pat.dob as date))/365.242, 2) &amp;gt; 100
+             THEN '&amp;gt;89'
+         ELSE 'adult'
+         END AS ICUSTAY_AGE_GROUP,
+     -- note that there is already a &amp;quot;hospital_expire_flag&amp;quot; field in the admissions table which you could use
+     CASE
+         WHEN adm.hospital_expire_flag = 1 then 'Y'           
+     ELSE 'N'
+     END AS hospital_expire_flag,
+     -- note also that hospital_expire_flag is equivalent to &amp;quot;Is adm.deathtime not null?&amp;quot;
+     CASE
+         WHEN adm.deathtime BETWEEN ie.intime and ie.outtime
+             THEN 'Y'
+         -- sometimes there are typographical errors in the death date, so check before intime
+         WHEN adm.deathtime &amp;lt;= ie.intime
+             THEN 'Y'
+         WHEN adm.dischtime &amp;lt;= ie.outtime
+             AND adm.discharge_location = 'DEAD/EXPIRED'
+             THEN 'Y'
+         ELSE 'N'
+         END AS ICUSTAY_EXPIRE_FLAG
+ FROM icustays ie
+ INNER JOIN patients pat
+ ON ie.subject_id = pat.subject_id
+ INNER JOIN admissions adm
+ ON ie.hadm_id = adm.hadm_id;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Categorized Inquiry of Patient Vital Signs&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt; select
+ ce.subject_id, ce.hadm_id, ce.icustay_id,
+ case
+     when itemid in (211,220045) and valuenum &amp;gt; 0 and valuenum &amp;lt; 300 then 1 -- HeartRate 心率
+     when itemid in (51,442,455,6701,220179,220050) and valuenum &amp;gt; 0 and valuenum &amp;lt; 400 then 2 -- SysBP 
+     when itemid in (8368,8440,8441,8555,220180,220051) and valuenum &amp;gt; 0 and valuenum &amp;lt; 300 then 3 -- DiasBP 
+     when itemid in (456,52,6702,443,220052,220181,225312) and valuenum &amp;gt; 0 and valuenum &amp;lt; 300 then 4 -- MeanBP 
+     when itemid in (615,618,220210,224690) and valuenum &amp;gt; 0 and valuenum &amp;lt; 70 then 5 -- RespRate 呼吸率
+     when itemid in (223761,678) and valuenum &amp;gt; 70 and valuenum &amp;lt; 120  then 6 -- TempF, converted to degC in valuenum call 华氏度体温，将转为摄氏度
+     when itemid in (223762,676) and valuenum &amp;gt; 10 and valuenum &amp;lt; 50  then 6 -- TempC 摄氏度体温
+     when itemid in (646,220277) and valuenum &amp;gt; 0 and valuenum &amp;lt;= 100 then 7 -- SpO2 血氧饱和度
+     when itemid in (807,811,1529,3745,3744,225664,220621,226537) and valuenum &amp;gt; 0 then 8 -- Glucose 血糖
+     else null end as vitalid
+     -- convert F to C
+ , case when itemid in (223761,678) then (valuenum-32)/1.8 else valuenum end as valuenum
+
+ from mimiciii.chartevents ce
+ where ce.itemid in
+ (
+ -- HEART RATE 心率
+ 211, --&amp;quot;Heart Rate&amp;quot;
+ 220045, --&amp;quot;Heart Rate&amp;quot;
+
+ -- Systolic/diastolic 收缩压/舒张压
+ 51, --	Arterial BP [Systolic] 动脉压收缩压
+ 442, --	Manual BP [Systolic] 手动测量血压收缩压
+ 455, --	NBP [Systolic] 无创血压收缩压
+ 6701, --	Arterial BP #2 [Systolic] 动脉压 #2 收缩压
+ 220179, --	Non Invasive Blood Pressure systolic 无创血压收缩压
+ 220050, --	Arterial Blood Pressure systolic 动脉压收缩压
+
+ 8368, --	Arterial BP [Diastolic] 动脉压舒张压
+ 8440, --	Manual BP [Diastolic] 手动测量血压舒张压
+ 8441, --	NBP [Diastolic] 无创血压舒张压
+ 8555, --	Arterial BP #2 [Diastolic] 动脉压 #2 舒张压
+ 220180, --	Non Invasive Blood Pressure diastolic	 无创血压舒张压
+ 220051, --	Arterial Blood Pressure diastolic 动脉压舒张压
+
+ -- MEAN ARTERIAL PRESSURE 平均压
+ 456, --&amp;quot;NBP Mean&amp;quot; 无创血压平均压
+ 52, --&amp;quot;Arterial BP Mean&amp;quot; 动脉压平均压
+ 6702, --	Arterial BP Mean #2  动脉压平均压 #2
+ 443, --	Manual BP Mean(calc) 手动测试血压平均压（计算）
+ 220052, --&amp;quot;Arterial Blood Pressure mean&amp;quot; 动脉压平均压
+ 220181, --&amp;quot;Non Invasive Blood Pressure mean&amp;quot; 无创血压平均压
+ 225312, --&amp;quot;ART BP mean&amp;quot; 动脉压平均压
+
+ -- RESPIRATORY RATE 呼吸率
+ 618,--	Respiratory Rate 呼吸率
+ 615,--	Resp Rate (Total) 呼吸率（总）
+ 220210,--	Respiratory Rate 呼吸率
+ 224690, --	Respiratory Rate (Total) 呼吸率（总）
+
+ -- SPO2, peripheral 血氧饱和度 体外测量
+ 646, 220277,
+
+ -- GLUCOSE, both lab and fingerstick 血糖
+ 807,--	Fingerstick Glucose 指尖血糖
+ 811,--	Glucose (70-105) 血糖
+ 1529,--	Glucose 血糖
+ 3745,--	BloodGlucose 血糖
+ 3744,--	Blood Glucose 血糖
+ 225664,--	Glucose finger stick 指尖血糖
+ 220621,--	Glucose (serum) 血糖（血清）
+ 226537,--	Glucose (whole blood) 血糖（全血）
+
+ -- TEMPERATURE 体温
+ 223762, -- &amp;quot;Temperature Celsius&amp;quot; 体温（摄氏度）
+ 676,	-- &amp;quot;Temperature C&amp;quot; 体温（摄氏度）
+ 223761, -- &amp;quot;Temperature Fahrenheit&amp;quot; 体温（华氏度）
+ 678 --	&amp;quot;Temperature F&amp;quot; 体温（华氏度）
+ )
+ limit 2000
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;&lt;a href="https://mimic.physionet.org/tutorials/intro-to-mimic-iii/"&gt;Click me to get more templates&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3&gt;&lt;strong&gt;Quick Reference&lt;/strong&gt;&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="https://mimic.physionet.org/mimictables/"&gt;MIMIC-III Tables&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="https://mimic.physionet.org/mimicdata/"&gt;MIMIC-III Data Details&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="https://mimic.physionet.org/tutorials/intro-to-mimic-iii/"&gt;Querying MIMIC-III&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="https://github.com/MIT-LCP/mimic-code"&gt;MIMIC Offical Code Repository&lt;/a&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="https://www.deepl.com/translator"&gt;DeepL&lt;/a&gt; - AI based Translator&lt;/p&gt;&lt;p&gt;&lt;strong&gt;SQL Tools&lt;/strong&gt;&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="https://www.psycopg.org/docs/usage.html#basic-module-usage"&gt;Psycopg&lt;/a&gt; is the most popular PostgreSQL adapter for the &lt;strong&gt;Python&lt;/strong&gt; programming language.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="https://www.pgadmin.org/"&gt;pgAdmin&lt;/a&gt; is the most popular and feature rich Open Source administration and development platform for PostgreSQL, the most advanced Open Source database in the world.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="https://www.navicat.com/en/support/online-manual"&gt;Navicat&lt;/a&gt; is a series of &lt;strong&gt;graphical&lt;/strong&gt; database management and development software produced by CyberTech Ltd. for MySQL, MariaDB, MongoDB, Oracle, SQLite, PostgreSQL and Microsoft SQL Server.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;&lt;a href="https://dbeaver.com/docs/wiki/"&gt;Dbeaver&lt;/a&gt; is a universal database management tool for everyone who needs to work with data in a professional way.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description><author>ZVd4cE1USXhNaU52ZFhSc2IyOXJMbU52YlE9PQ== (CrazyDogen)</author><guid isPermaLink="true">/archives/mimiciiiQS/</guid><pubDate>Fri, 27 Nov 2020 11:20:00 +0806</pubDate></item></channel></rss>

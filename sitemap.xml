@@ -12,6 +12,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
+    <loc>/archives/mimiciiiQS/</loc>
+    <lastmod>2020-11-27</lastmod>
+    <changefreq>always</changefreq>
+    <priority>0.5</priority>
+</url>
+
+<url>
     <loc>/archives/binEncode/</loc>
     <lastmod>2020-11-04</lastmod>
     <changefreq>always</changefreq>
