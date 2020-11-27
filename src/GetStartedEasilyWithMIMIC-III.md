@@ -6,7 +6,7 @@ date: 2020-11-27 11:20
 status: publish
 author: CrazyDogen
 categories: 
-  - Thoughts
+  - GettingStarted
 tags: 
   - MIMIC-III
   - SQL
@@ -14,7 +14,7 @@ excerpt: Quick Start of MIMIC-III
 ---
 
 ### Working with the MIMIC-III database using Structured Query Language 
-****
+
 Before working with the MIMIC-III DB, you have to **be familiar with** basic SQL usage.
 
  - [Here is an offical tutorial from MIT-LCP](https://github.com/MIT-LCP/mimic-code/blob/master/tutorials/sql-intro.md)
