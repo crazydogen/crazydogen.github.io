@@ -18,6 +18,7 @@ excerpt: Quick Start of TSA
 ![Critical difference diagram for classifiers](http://www.timeseriesclassification.com/images/megaCD.jpg)
 
 Solid bars indicate cliques, within which there is no significant difference in rank. Tests are performed with the sign rank test using the Holm correction. **Top clique of four classifiers** represent the state of the art in Spring 2020.
+
 [Click here](http://www.timeseriesclassification.com/results.php) (based on UEA & UCR project) to get more details.
 ### Datasets
  - [UEA & UCR Time Series Classification Repository](http://www.timeseriesclassification.com/dataset.php) is an ongoing project to develop a comprehensive repository for research into time series classification. 
