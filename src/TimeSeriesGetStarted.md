@@ -19,7 +19,7 @@ excerpt: Quick Start of TSA
 
 Solid bars indicate cliques, within which there is no significant difference in rank. Tests are performed with the sign rank test using the Holm correction. **Top clique of four classifiers** represent the state of the art in Spring 2020.
 
-[Click here](http://www.timeseriesclassification.com/results.php) to get more details about UEA & UCR project.
+[Click here](http://www.timeseriesclassification.com/results.php) to get more details about this ranking.
 ### Datasets
  - [UEA & UCR Time Series Classification Repository](http://www.timeseriesclassification.com/dataset.php) is an ongoing project to develop a comprehensive repository for research into time series classification. 
  - [Peter H Charlton's Project (clinical signals)](http://peterhcharlton.github.io) composes of four clinical time series (Respiratory rate, pulse wave, etc.) now. Besides, he also provided some useful toolboxes for time series mentioned above.
