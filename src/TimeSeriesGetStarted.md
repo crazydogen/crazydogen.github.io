@@ -14,7 +14,7 @@ excerpt: Quick Start of TSA
 ---
 
 
-### State of the art algorithms in 2020
+### State of the art algorithms(TSC) in 2020
 ![Critical difference diagram for classifiers](http://www.timeseriesclassification.com/images/megaCD.jpg)
 
 Solid bars indicate cliques, within which there is no significant difference in rank. Tests are performed with the sign rank test using the Holm correction. **Top clique of four classifiers** represent the state of the art in Spring 2020.
