@@ -57,7 +57,7 @@ Personal and biased selection of ML resources.
 - [Google ML crash course](https://developers.google.com/machine-learning/crash-course/)
 - [Dive into Deep Learning](https://d2l.ai/)
 ## Machine Learning
-There are many ML books, but most of them are encyclopedic. <br/>
+There are many ML books, but most of them are encyclopedic. 
 I recommend to take a course using Murphy or Bishop book.
 
 ### Textbook
@@ -75,7 +75,7 @@ I recommend to take a course using Murphy or Bishop book.
 
 
 ## Deep Learning
-Goodfellow et al. is the new classic. <br/>
+Goodfellow et al. is the new classic. 
 For vision and NLP, Stanford lectures would be helpful.
 
 ### Textbook
@@ -94,7 +94,7 @@ For vision and NLP, Stanford lectures would be helpful.
 
 
 ## Generative Model
-I seperated generative model as an independent topic, <br/>
+I seperated generative model as an independent topic, 
 since I think it is big and important area.
 
 ### Lecture
@@ -104,7 +104,7 @@ since I think it is big and important area.
 
 
 ## Reinforcement Learning
-For classic (non-deep) RL, Sutton & Barto is the classic. <br/>
+For classic (non-deep) RL, Sutton & Barto is the classic. 
 For deep RL, lectures from Berkeley/CMU looks good.
 
 ### Textbook
@@ -117,10 +117,10 @@ For deep RL, lectures from Berkeley/CMU looks good.
 
 
 ## Graphical Model
-Koller & Friedman is comprehensive, but too encyclopedic. <br/>
-I recommend to take an introductory course using Koller & Friedman book. <br/>
+Koller & Friedman is comprehensive, but too encyclopedic. 
+I recommend to take an introductory course using Koller & Friedman book. 
 
-Wainwright & Jordan only focuses on variational inference, <br/>
+Wainwright & Jordan only focuses on variational inference, 
 but it gives really good intuition for probabilistic models.
 
 ### Textbook
@@ -133,10 +133,10 @@ but it gives really good intuition for probabilistic models.
 
 
 ## Optimization
-Boyd & Vandenberghe is the classic, but I think it's too boring. <br/>
+Boyd & Vandenberghe is the classic, but I think it's too boring. 
 Reading chapter 2-5 would be enough.
 
-Bertsekas more concentrates on convex analysis. <br/>
+Bertsekas more concentrates on convex analysis. 
 Nocedal & Wright more concentrates on optimization.
 
 ### Textbook
@@ -156,10 +156,10 @@ In my understanding, there are two major topics in learning theory:
 - **Learning Theory:** VC-dimension, PAC-learning
 - **Online Learning:** regret bound, multi-armed bandit
 
-For learning theory, Kearns & Vazirani is the classic; but it's too old-fashined. <br/>
+For learning theory, Kearns & Vazirani is the classic; but it's too old-fashined. 
 Abu-Mostafa is a good introductory book, and I think it's enough for most people.
 
-For online learning, Cesa-Bianchi & Lugosi is the classic. <br/>
+For online learning, Cesa-Bianchi & Lugosi is the classic. 
 For multi-armed bandit, Bubeck & Cesa-Bianchi provides a good survey.
 
 ### Textbook (Learning Theory)
@@ -179,8 +179,8 @@ For multi-armed bandit, Bubeck & Cesa-Bianchi provides a good survey.
 
 
 ## Statistics
-Statistics is a broad area; hence, I listed only a few of them. <br/>
-For advanced topics, lectures from Berkeley/Stanford/CMU/MIT looks really cool. <br/>
+Statistics is a broad area; hence, I listed only a few of them. 
+For advanced topics, lectures from Berkeley/Stanford/CMU/MIT looks really cool. 
 
 ### Textbook (Statistical Inference)
 - All of Statistics (Wasserman)
@@ -209,7 +209,7 @@ For advanced topics, lectures from Berkeley/Stanford/CMU/MIT looks really cool. 
 
 
 ## Topics in Machine Learning
-Miscellaneous topics related to machine learning. <br/>
+Miscellaneous topics related to machine learning. 
 There are much more subfields, but I'll not list them all.
 
 ### Information Theory
@@ -248,7 +248,7 @@ There are much more subfields, but I'll not list them all.
 
 
 ## Math Backgrounds
-I selected essential topics for machine learning. <br/>
+I selected essential topics for machine learning. 
 Personally, I think more analysis / matrix / geometry never hurts.
 
 ### Probability
