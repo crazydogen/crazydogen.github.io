@@ -61,14 +61,14 @@ There are many ML books, but most of them are encyclopedic.
 I recommend to take a course using Murphy or Bishop book.
 
 ### Textbook
-- Machine Learning: A Probabilistic Perspective (Murphy) :sparkles:
-- Pattern Recognition and Machine Learning (Bishop) :sparkles:
+- Machine Learning: A Probabilistic Perspective (Murphy) 
+- Pattern Recognition and Machine Learning (Bishop) 
 - The Elements of Statistical Learning (Hastie et al.)
 - Pattern Classification (Duda et al.)
 - Bayesian Reasoning and Machine Learning (Barber)
 
 ### Lecture
-- [Stanford CS229 Machine Learning](http://cs229.stanford.edu) :sparkles:
+- [Stanford CS229 Machine Learning](http://cs229.stanford.edu) 
 - [CMU 10701 Mahine Learning](http://www.cs.cmu.edu/~tom/10701_sp11/)
 - [CMU 10702 Statistical Machine Learning](http://www.stat.cmu.edu/~larry/=sml/)
 - [Oxford Machine Learning](https://www.cs.ox.ac.uk/people/nando.defreitas/machinelearning/)
@@ -79,11 +79,11 @@ Goodfellow et al. is the new classic.
 For vision and NLP, Stanford lectures would be helpful.
 
 ### Textbook
-- Deep Learning (Goodfellow et al.) :sparkles:
+- Deep Learning (Goodfellow et al.) 
 
 ### Lecture (Practice)
-- [Deep Learning book](http://www.deeplearningbook.org/lecture_slides.html) :sparkles:
-- [Stanford CS231n Convolutional Neural Networks for Visual Recognition](http://cs231n.stanford.edu) :sparkles:
+- [Deep Learning book](http://www.deeplearningbook.org/lecture_slides.html) 
+- [Stanford CS231n Convolutional Neural Networks for Visual Recognition](http://cs231n.stanford.edu) 
 - [Stanfrod CS224d Deep Learning for Natural Language Processing](http://cs224d.stanford.edu)
 - [Stanfrod CS224s Spoken Language Processing](http://web.stanford.edu/class/cs224s/)
 - [Oxford Deep Natural Language Processing](https://github.com/oxford-cs-deepnlp-2017/lectures)
@@ -108,11 +108,11 @@ For classic (non-deep) RL, Sutton & Barto is the classic.
 For deep RL, lectures from Berkeley/CMU looks good.
 
 ### Textbook
-- Reinforcement Learning: An Introduction (Sutton & Barto) :sparkles:
+- Reinforcement Learning: An Introduction (Sutton & Barto) 
 
 ### Lecture
-- [UCL Reinforcement Learning](http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching.html) :sparkles:
-- [Berkeley CS294 Deep Reinforcement Leanring](http://rll.berkeley.edu/deeprlcourse/) :sparkles:
+- [UCL Reinforcement Learning](http://www0.cs.ucl.ac.uk/staff/d.silver/web/Teaching.html) 
+- [Berkeley CS294 Deep Reinforcement Leanring](http://rll.berkeley.edu/deeprlcourse/) 
 - [CMU 10703 Deep Reinforcement Learing and Control](https://katefvision.github.io/)
 
 
@@ -125,11 +125,11 @@ but it gives really good intuition for probabilistic models.
 
 ### Textbook
 - Probabilistic Graphical Models: Principles and Techniques (Koller & Friedman)
-- Graphical Models, Exponential Families, and Variational Inference (Wainwright & Jordan) :sparkles:
+- Graphical Models, Exponential Families, and Variational Inference (Wainwright & Jordan) 
 
 ### Lecture
 - [Stanford CS228 Probabilistic Graphical Models](http://cs.stanford.edu/~ermon/cs228/index.html)
-- [CMU 10708 Probabilistic Graphical Models](http://www.cs.cmu.edu/~epxing/Class/10708/) :sparkles:
+- [CMU 10708 Probabilistic Graphical Models](http://www.cs.cmu.edu/~epxing/Class/10708/) 
 
 
 ## Optimization
@@ -140,12 +140,12 @@ Bertsekas more concentrates on convex analysis.
 Nocedal & Wright more concentrates on optimization.
 
 ### Textbook
-- Convex Optimization (Boyd & Vandenberghe) :sparkles:
+- Convex Optimization (Boyd & Vandenberghe) 
 - Convex Optimization Theory (Bertsekas)
 - Numerical Optimization (Nocedal & Wright)
 
 ### Lecture
-- [Stanford EE364a Convex Optimization I](http://stanford.edu/class/ee364a/) :sparkles:
+- [Stanford EE364a Convex Optimization I](http://stanford.edu/class/ee364a/) 
 - [Stanford EE364b Convex Optimization II](http://stanford.edu/class/ee364a/)
 - [MIT 6.253 Convex Analysis and Optimization](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-253-convex-analysis-and-optimization-spring-2012/index.htm)
 
@@ -163,7 +163,7 @@ For online learning, Cesa-Bianchi & Lugosi is the classic.
 For multi-armed bandit, Bubeck & Cesa-Bianchi provides a good survey.
 
 ### Textbook (Learning Theory)
-- Learning from Data (Abu-Mostafa) :sparkles:
+- Learning from Data (Abu-Mostafa) 
 - Foundations of Machine Learning (Mohri et al.)
 - An Introduction to Computational Learning Theory (Kearns & Vazirani) 
 
@@ -172,7 +172,7 @@ For multi-armed bandit, Bubeck & Cesa-Bianchi provides a good survey.
 - Regret Analysis of Stochastic and Nonstochastic Multi-armed Bandit Problems (Bubeck & Cesa-Bianchi)
 
 ### Lecture
-- [Caltech Learning from Data](https://work.caltech.edu/telecourse.html) :sparkles:
+- [Caltech Learning from Data](https://work.caltech.edu/telecourse.html) 
 - [CMU 15859 Machine Learning Theory](http://www.cs.cmu.edu/~avrim/ML14/)
 - [Berkeley CS281b/Stat241b Statistical Learning Theory](https://www.stat.berkeley.edu/~bartlett/courses/2014spring-cs281bstat241b/)
 - [MIT 9.520 Statistical Learning Theory and Applications](http://www.mit.edu/~9.520/fall15/)
@@ -184,17 +184,17 @@ For advanced topics, lectures from Berkeley/Stanford/CMU/MIT looks really cool.
 
 ### Textbook (Statistical Inference)
 - All of Statistics (Wasserman)
-- Computer Age Statistical Inference (Efron & Hastie) :sparkles:
+- Computer Age Statistical Inference (Efron & Hastie) 
 - Time Series Analysis and Its Applications: With R Examples (Shumway & Stoffer)
 
 ### Textbook (Nonparametrics)
 - All of Nonparametric Statistics (Wasserman)
 - Introduction to Nonparametric Estimation (Tsybakov)
-- Gaussian Process and Machine Learning (Rasmussen & Williams) :sparkles:
-- Bayesian Nonparametrics (Ghosh & Ramamoorthi) :sparkles:
+- Gaussian Process and Machine Learning (Rasmussen & Williams) 
+- Bayesian Nonparametrics (Ghosh & Ramamoorthi) 
 
 ### Textbook (Advanced Topics)
-- High-Dimensional Statistics: A Non-Asymptotic Viewpoint (Wainwright) :sparkles:
+- High-Dimensional Statistics: A Non-Asymptotic Viewpoint (Wainwright) 
 - Statistics for High-Dimensional Data (Bühlmann & van de Geer)
 - Asymptotic Statistics (van der Vaart)
 - Empirical Processes in M-Estimation (van der Vaart)
