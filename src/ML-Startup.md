@@ -13,10 +13,6 @@ tags:
 excerpt: Resources for ML research
 ---
 
-
-
-# Resources for ML research
-
 Personal and biased selection of ML resources.
 [Initial from sangwoomo's repo](https://github.com/sangwoomo/ml-resources) and will be consecutively extended.
 
