@@ -18,8 +18,8 @@ Personal and biased selection of ML resources.
 
 
 ## Table of Contents
-- [Beginner's Guide](#beginners-guide)
-- [Machine Learning](#machine-learning)
+- [Beginner's Guide](#Beginner's Guide)
+- [Machine Learning](#Machine Learning)
 - [Deep Learning](#deep-learning)
 - [Generative Model](#generative-model)
 - [Reinforcement Learning](#reinforcement-learning)
