@@ -2,14 +2,14 @@
 layout: post
 title: Resources for ML research
 slug: resForML
-date: 2021-02-07 08:245
+date: 2021-02-07 09:01
 status: publish
 author: CrazyDogen
 categories: 
-  - Resources
+  - Machine Learning
 tags: 
   - ML
-  - Research
+  - Resources
 excerpt: Resources for ML research
 ---
 
@@ -38,6 +38,10 @@ Personal and biased selection of ML resources.
 
 ## Beginner's Guide
 
+**Pragmatic Primer**
+- [Google ML crash course](https://developers.google.com/machine-learning/crash-course/)
+- [Dive into Deep Learning](https://d2l.ai/)
+
 **Must Read**
 - Machine Learning: A Probabilistic Perspective (Murphy)
 - Deep Learning (Goodfellow et al.)
@@ -53,9 +57,7 @@ Personal and biased selection of ML resources.
 - Read lectures from Berkeley, Stanford, CMU or UofT (e.g., [unsupervised learning](https://sites.google.com/view/berkeley-cs294-158-sp19))
 - There are lots of good sources, but I stop updating them up-to-date
 
-**Self-learning Guide**
-- [Google ML crash course](https://developers.google.com/machine-learning/crash-course/)
-- [Dive into Deep Learning](https://d2l.ai/)
+
 ## Machine Learning
 There are many ML books, but most of them are encyclopedic. 
 I recommend to take a course using Murphy or Bishop book.
