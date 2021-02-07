@@ -37,7 +37,7 @@ Personal and biased selection of ML resources.
 **Pragmatic Primer**
 - [Google ML crash course](https://developers.google.com/machine-learning/crash-course/)
 - [Dive into Deep Learning](https://d2l.ai/)
-- [UFLDL](http://ufldl.stanford.edu/tutorial/)
+- [UFLDL Tutorial](http://ufldl.stanford.edu/tutorial/)
 
 **Must Read**
 - Machine Learning: A Probabilistic Perspective (Murphy)
