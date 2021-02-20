@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Awesome pdfs of CS & DL
+title: Awesome pdfs and pics of CS
 slug: awesome-CS-pdfs
 date: 2020-10-18 22:20
 status: publish
@@ -11,7 +11,7 @@ tags:
   - Computer Science
   - Deep Learning
   - pdfs
-excerpt: some useful pdfs of CS & DL
+excerpt: some useful pdfs and pics of CS
 ---
 
 [Pdfs can be found here](https://github.com/crazydogen/crazydogen.github.io/tree/master/src/pdfs)
