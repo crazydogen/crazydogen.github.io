@@ -13,7 +13,6 @@ tags:
 excerpt: Easy data mining via python
 ---
 
-# Easy data mining via python
 *Note: This essay uses python for data mining.*
 
 Agenda
