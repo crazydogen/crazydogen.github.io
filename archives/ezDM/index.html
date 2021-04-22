@@ -1,0 +1,320 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="keywords" content="CrazyDogen,blog" />
+    <meta name="generator" content="Maverick 1.1" />
+    <meta name="template" content="Galileo" />
+    <link rel="alternate" type="application/rss+xml" title="0x262f &raquo; RSS 2.0" href="/feed/index.xml" />
+    <link rel="alternate" type="application/atom+xml" title="0x262f &raquo; ATOM 1.0" href="/feed/atom/index.xml" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/crazydogen/crazydogen.github.io@gh-pages/assets/galileo-8d8763e752.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/crazydogen/crazydogen.github.io@gh-pages/assets/ExSearch/ExSearch-182e5a8868.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/crazydogen/crazydogen.github.io@gh-pages/assets/katex.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Code&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700&display=swap">
+    <script>
+        var ExSearchConfig = {
+            root: "",
+            api: "https://cdn.jsdelivr.net/gh/crazydogen/crazydogen.github.io@gh-pages/80f9d9b6052d9ee21b45fb1cfebf5eae.json"
+        }
+    </script>
+    
+<title>Easy data mining via python - 0x262f</title>
+<meta name="author" content="CrazyDogen" />
+<meta name="description" content="Easy data mining via python" />
+<meta property="og:title" content="Easy data mining via python - 0x262f" />
+<meta property="og:description" content="Easy data mining via python" />
+<meta property="og:site_name" content="0x262f" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/archives/ezDM/" />
+<meta property="og:image" content="" />
+<meta property="article:published_time" content="2021-04-22T17:01:00-00.00" />
+<meta name="twitter:title" content="Easy data mining via python - 0x262f" />
+<meta name="twitter:description" content="Easy data mining via python" />
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:image" content="" />
+
+
+    
+<meta name="google-site-verification" content="KC8Dz5CO0_r1vT128FTo6CCk-pRkf7wszo0SNRiPyqk" />
+<meta http-equiv="x-dns-prefetch-control" content="on">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+<link href='https://fonts.googleapis.com/css?family=Nunito Sans' rel='stylesheet'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="dns-prefetch" href="//cdn.jsdelivr.net" />
+
+    </head>
+    
+    <body>
+        
+        <div class="container">
+            <header id="ga-header">
+                <div first>
+                    <aside id="ga-brand">
+                        <h1 class="brand"><a class="no-style" href="/">0x262f</a></h1>
+                        <p>Everything's a trade-off——avoid unnecessary work, think more to do less.</p>
+                    </aside>
+                </div>
+                <div second id="ga-nav">
+                    <nav class="navs">
+                        <ul><li><a class="ga-highlight" href="/" target="_self">Home</a></li><span class="separator">·</span><li><a class="ga-highlight" href="/archives/" target="_self">Archived</a></li><span class="separator">·</span><li><a class="ga-highlight" href="/about/" target="_self">About</a></li><span class="separator">·</span><li><a href="#" target="_self" class="search-form-input ga-highlight">Search</a></li></ul>
+                    </nav>
+                </div>
+            </header>
+            <div class="wrapper">
+                
+<main>    
+    <section class="ga-section ga-content">
+        <article class="yue">
+            <h1 class="ga-post_title">Easy data mining via python</h1>
+            <span class="ga-post_meta ga-mono">
+                <span>CrazyDogen</span>
+                <time>
+                    2021-04-22
+                </time>
+                
+                in <a no-style class="category" href="/category/Data%20Mining/">
+                    Data Mining
+                </a>
+                
+                
+            </span>
+            <div class="ga-content_body">
+                <h1>Easy data mining via python</h1>
+<p><em>Note: This essay uses python for data mining.</em></p><p>Agenda</p><ul>
+<li>Pandas</li>
+<li>Pandas-Profiling</li>
+<li>Statsmodels</li>
+<li>Missingno</li>
+<li>Wordcloud</li>
+</ul>
+<hr />
+<h2>Pandas</h2>
+<p><a href="http://pandas.pydata.org/pandas-docs/stable/reference/">Pandas</a> is a Python library for exploring, processing, and model data.</p><p>Here we take a dataset named mimic-III as an example.</p><h3>Basic stats</h3>
+<div class="highlight"><pre><span></span><span class="c1"># First load df from a file</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="n">df</span><span class="o">.</span><span class="n">shape</span>
+<span class="n">df</span><span class="p">[</span><span class="n">a</span> <span class="n">column</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">df</span><span class="p">[</span><span class="n">a</span> <span class="n">column</span><span class="p">]</span><span class="o">.</span><span class="n">std</span><span class="p">()</span>
+<span class="n">df</span><span class="p">[</span><span class="n">a</span> <span class="n">column</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+<span class="n">df</span><span class="p">[</span><span class="n">a</span> <span class="n">column</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">()</span>
+<span class="n">df</span><span class="p">[</span><span class="n">a</span> <span class="n">column</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">()</span>
+<span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span> <span class="c1"># brief description</span>
+<span class="n">df</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">any</span><span class="p">()</span> <span class="c1"># check every columns whether it has missing values</span>
+<span class="n">df</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span> <span class="c1"># count NAN values</span>
+</pre></div>
+<h4><em>Additional tips</em></h4>
+<ul>
+<li><p><a href="https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html?highlight=dataframe#pandas.DataFrame">Pandas dataframe methods</a></p></li>
+<li><p><a href="https://pandas.pydata.org/pandas-docs/stable/user_guide/missing_data.html">Working with missing data</a></p></li>
+<li><p><a href="https://pandas.pydata.org/pandas-docs/stable/user_guide/10min.html#operations">Pandas dataframe Operations</a></p></li>
+<li><p><a href="https://pandas.pydata.org/pandas-docs/stable/user_guide/computation.html#statistical-functions">Statistical functions</a></p></li>
+</ul>
+<h3>Charting a tabular dataset</h3>
+<p><em>Supported charts</em></p><div class="highlight"><pre><span></span><span class="n">DataFrame</span><span class="p">.</span><span class="n">plot</span><span class="p">([</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">],</span> <span class="n">kind</span><span class="p">)</span>
+
+ <span class="o">-</span> <span class="n">kind</span> <span class="p">:</span>
+
+    <span class="o">-</span> <span class="s1">&#39;line&#39;</span><span class="p">:</span> <span class="n">line</span> <span class="n">plot</span> <span class="p">(</span><span class="n">default</span><span class="p">)</span>
+    <span class="o">-</span> <span class="s1">&#39;bar&#39;</span><span class="p">:</span> <span class="n">vertical</span> <span class="n">bar</span> <span class="n">plot</span>
+    <span class="o">-</span> <span class="s1">&#39;barh&#39;</span><span class="p">:</span> <span class="n">horizontal</span> <span class="n">bar</span> <span class="n">plot</span>
+    <span class="o">-</span> <span class="s1">&#39;hist&#39;</span><span class="p">:</span> <span class="n">histogram</span>
+    <span class="o">-</span> <span class="s1">&#39;box&#39;</span><span class="p">:</span> <span class="n">boxplot</span>
+    <span class="o">-</span> <span class="s1">&#39;kde&#39;</span><span class="p">:</span> <span class="n">Kernel</span> <span class="n">Density</span> <span class="n">Estimation</span> <span class="n">plot</span>
+    <span class="o">-</span> <span class="s1">&#39;density&#39;</span><span class="p">:</span> <span class="n">same</span> <span class="n">as</span> <span class="s1">&#39;kde&#39;</span>
+    <span class="o">-</span> <span class="s1">&#39;area&#39;</span><span class="p">:</span> <span class="n">stacked</span> <span class="n">area</span> <span class="n">plot</span>
+    <span class="o">-</span> <span class="s1">&#39;pie&#39;</span><span class="p">:</span> <span class="n">pie</span> <span class="n">plot</span>
+    <span class="o">-</span> <span class="s1">&#39;scatter&#39;</span><span class="p">:</span> <span class="n">scatter</span> <span class="n">plot</span>
+    <span class="o">-</span> <span class="s1">&#39;hexbin&#39;</span><span class="p">:</span> <span class="n">Hexagonal</span> <span class="n">binning</span> <span class="n">plot</span>
+</pre></div>
+<p><a href="https://cdn.kesci.com/upload/image/pz6v5kfnx9.jpg"><figure style="flex: 53.333333333333336" ><img loading="lazy" width="1200" height="1125" src="https://cdn.kesci.com/upload/image/pz6v5kfnx9.jpg" /><figcaption>show</figcaption></figure></a></p><hr />
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;/path/mimic_demo/admissions.csv&quot;</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">lower</span><span class="p">,</span> <span class="n">a</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;marital_status&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">count</span><span class="p">()[</span><span class="s1">&#39;row_id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s1">&#39;pie&#39;</span><span class="p">)</span>
+</pre></div>
+<figure style="flex: 64.70588235294117" ><img loading="lazy" width="308" height="238" src="https://cdn.kesci.com/rt_upload/8164ABCC4BD740B8B82E04D341CD2130/pz6v9lgwy6.png" /><figcaption>pie</figcaption></figure><hr />
+<div class="highlight"><pre><span></span><span class="n">a</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;religion&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">count</span><span class="p">()[</span><span class="s1">&#39;row_id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span> <span class="o">=</span> <span class="s1">&#39;barh&#39;</span><span class="p">)</span>
+</pre></div>
+<figure style="flex: 97.02380952380952" ><img loading="lazy" width="489" height="252" src="https://cdn.kesci.com/rt_upload/5CACB1E177EB41008A6539C7A5B0D5DC/pz6v9pk61e.png" /><figcaption>pie-bar</figcaption></figure><hr />
+<div class="highlight"><pre><span></span><span class="n">p</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;/path/mimic_demo/patients.csv&quot;</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">lower</span><span class="p">,</span> <span class="n">p</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+<span class="n">ap</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">on</span> <span class="o">=</span> <span class="s1">&#39;subject_id&#39;</span> <span class="p">,</span> <span class="n">how</span> <span class="o">=</span> <span class="s1">&#39;inner&#39;</span><span class="p">)</span>
+<span class="n">ap</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;religion&#39;</span><span class="p">,</span><span class="s1">&#39;gender&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">unstack</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s2">&quot;barh&quot;</span><span class="p">,</span> <span class="n">stacked</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+<figure style="flex: 97.02380952380952" ><img loading="lazy" width="489" height="252" src="https://cdn.kesci.com/rt_upload/437373AAB7694E74A9C04236EADFC3AE/pz6vabjbn.png" /><figcaption>brah-partients</figcaption></figure><hr />
+<div class="highlight"><pre><span></span><span class="n">c</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;/path/mimic_demo/cptevents.csv&quot;</span><span class="p">)</span>
+<span class="n">c</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">lower</span><span class="p">,</span> <span class="n">c</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+<span class="n">ac</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">on</span> <span class="o">=</span> <span class="s1">&#39;hadm_id&#39;</span> <span class="p">,</span> <span class="n">how</span> <span class="o">=</span> <span class="s1">&#39;inner&#39;</span><span class="p">)</span>
+<span class="n">ac</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s1">&#39;discharge_location&#39;</span><span class="p">,</span><span class="s1">&#39;sectionheader&#39;</span><span class="p">])</span><span class="o">.</span><span class="n">size</span><span class="p">()</span><span class="o">.</span><span class="n">unstack</span><span class="p">()</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">kind</span><span class="o">=</span><span class="s2">&quot;barh&quot;</span><span class="p">,</span> <span class="n">stacked</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+<figure style="flex: 103.96825396825396" ><img loading="lazy" width="524" height="252" src="https://cdn.kesci.com/rt_upload/BA4307CCFE364B778D53307BFF50F5AD/pz6vazdrjl.png" /><figcaption>barh-cptevents</figcaption></figure><h2>Pandas-profiling</h2>
+<p><a href="https://pandas-profiling.github.io/pandas-profiling/docs/master/rtd">Pandas-Profiling</a> is a Python library for exploratory data analysis.</p><p><code>A quick example</code></p><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">pandas_profiling</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;/path/mimic_demo/admissions.csv&quot;</span><span class="p">)</span>
+<span class="n">a</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="nb">map</span><span class="p">(</span><span class="nb">str</span><span class="o">.</span><span class="n">lower</span><span class="p">,</span> <span class="n">a</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>
+<span class="c1"># ignore the times when profiling since they are uninteresting</span>
+<span class="n">cols</span> <span class="o">=</span> <span class="p">[</span><span class="n">c</span> <span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">a</span><span class="o">.</span><span class="n">columns</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">c</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s1">&#39;time&#39;</span><span class="p">)]</span>
+<span class="n">pandas_profiling</span><span class="o">.</span><span class="n">ProfileReport</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="n">cols</span><span class="p">],</span> <span class="n">explorative</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+<p><code>Save generated profile to a &quot;.html&quot;.</code></p><div class="highlight"><pre><span></span><span class="n">profile</span><span class="o">.</span><span class="n">to_file</span><span class="p">(</span><span class="s2">&quot;/path/data_profile.html&quot;</span><span class="p">)</span>
+</pre></div>
+<h2>Statsmodels</h2>
+<p><a href="https://www.statsmodels.org/stable/index.html">Statsmodels</a> is a Python module that provides classes and functions for the estimation of many different statistical models, as well as for conducting statistical tests, and statistical data exploration.</p><h3>Basic stats</h3>
+<p>For simplicity, we use statsmodels' <code>describe</code> (<em>Note: <code>Describe</code> has been deprecated in favor of <code>Description</code> and it's simplified functional version, <code>describe</code>. <code>Describe</code> will be removed after 0.13</em>) for quick stats. The selectable statistics include:</p><ul>
+<li><p>“nobs” - Number of observations</p></li>
+<li><p>“missing” - Number of missing observations</p></li>
+<li><p>“mean” - Mean</p></li>
+<li><p>“std_err” - Standard Error of the mean assuming no correlation</p></li>
+<li><p>“ci” - Confidence interval with coverage (1 - alpha) using the normal or t. This option creates two entries in any tables: lower_ci and upper_ci.</p></li>
+<li><p>“std” - Standard Deviation</p></li>
+<li><p>“iqr” - Interquartile range</p></li>
+<li><p>“iqr_normal” - Interquartile range relative to a Normal</p></li>
+<li><p>“mad” - Mean absolute deviation</p></li>
+<li><p>“mad_normal” - Mean absolute deviation relative to a Normal</p></li>
+<li><p>“coef_var” - Coefficient of variation</p></li>
+<li><p>“range” - Range between the maximum and the minimum</p></li>
+<li><p>“max” - The maximum</p></li>
+<li><p>“min” - The minimum</p></li>
+<li><p>“skew” - The skewness defined as the standardized 3rd central moment</p></li>
+<li><p>“kurtosis” - The kurtosis defined as the standardized 4th central moment</p></li>
+<li><p>“jarque_bera” - The Jarque-Bera test statistic for normality based on the skewness and kurtosis. This option creates two entries, jarque_bera and jarque_beta_pval.</p></li>
+<li><p>“mode” - The mode of the data. This option creates two entries in all tables, mode and mode_freq which is the empirical frequency of the modal value.</p></li>
+<li><p>“median” - The median of the data.</p></li>
+<li><p>“percentiles” - The percentiles. Values included depend on the input value of percentiles.</p></li>
+<li><p>“distinct” - The number of distinct categories in a categorical.</p></li>
+<li><p>“top” - The mode common categories. Labeled top_n for n in 1, 2, …, ntop.</p></li>
+<li><p>“freq” - The frequency of the common categories. Labeled freq_n for n in 1, 2, …, ntop.</p></li>
+</ul>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">statsmodels.stats.descriptivestats</span> <span class="k">as</span> <span class="nn">dst</span>
+
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.max_columns&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">set_option</span><span class="p">(</span><span class="s1">&#39;display.max_rows&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;/path/xx.csv&quot;</span><span class="p">)</span> <span class="c1"># load your file via pd.read_xx()</span>
+<span class="n">de</span> <span class="o">=</span> <span class="n">dst</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+
+<span class="c1"># Save the description to excel (pandas also support other formats)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">()</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="s2">&quot;./pd_des.xlsx&quot;</span><span class="p">)</span>
+<span class="n">de</span><span class="o">.</span><span class="n">to_excel</span><span class="p">(</span><span class="s2">&quot;./sm_des.xlsx&quot;</span><span class="p">)</span>
+</pre></div>
+<h2>Missingno</h2>
+<p><a href="https://github.com/ResidentMario/missingno">Missingno</a> offers a visual summary of the completeness of a dataset. This example brings some intuitive thoughts about <code>ADMISSIONS</code> table:</p><ul>
+<li>Not every patient is admitted to the emergency department as there are many missing values in edregtime and edouttime.</li>
+<li><code>Language</code> data of patients is mendatory field, but it used to be not.</li>
+</ul>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">missingno</span> <span class="k">as</span> <span class="nn">msno</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;/path/mimic_demo/admissions.csv&quot;</span><span class="p">)</span>
+<span class="n">msno</span><span class="o">.</span><span class="n">matrix</span><span class="p">(</span><span class="n">a</span><span class="p">)</span>
+</pre></div>
+<figure style="flex: 103.34346504559271" ><img loading="lazy" width="2040" height="987" src="https://cdn.kesci.com/rt_upload/F8F0800F2EEE484B8D2F6644E9FC75E5/pz6vdf5jgp.png" /><figcaption>msno-show</figcaption></figure><p>Missingsno also supports bar charts, heatmaps and dendrograms, check it out at <a href="https://github.com/ResidentMario/missingno">github</a>.</p><h2>Wordcloud</h2>
+<p><a href="https://github.com/amueller/word_cloud">Wordcloud</a> visualizes a given text in a word-cloud format</p><p>This example illustrates that majority of patients suffered from sepsis.</p><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">wordcloud</span> <span class="kn">import</span> <span class="n">WordCloud</span>
+<span class="n">text</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="p">[</span><span class="s1">&#39;diagnosis&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">)</span> <span class="c1">#Prepare an input text in string</span>
+<span class="n">wordcloud</span> <span class="o">=</span> <span class="n">WordCloud</span><span class="p">()</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span><span class="n">text</span><span class="p">)</span> <span class="c1">#Generate a word-cloud from the input text</span>
+
+<span class="c1"># Plot the word-cloud </span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">wordcloud</span><span class="p">,</span> <span class="n">interpolation</span> <span class="o">=</span> <span class="s1">&#39;bilinear&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s2">&quot;off&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+<figure style="flex: 94.54545454545455" ><img loading="lazy" width="832" height="440" src="https://cdn.kesci.com/rt_upload/A509C511D92D448A9A23CBAE07F86754/pz6ve5zdjr.png" /><figcaption>wordcloud</figcaption></figure><h2><em>Reference</em></h2>
+<ul>
+<li><a href="https://www.heywhale.com/mw/project/5d9fe977037db3002d4159b4">MIMIC 数据集数据可视化</a></li>
+<li><a href="https://github.com/MIT-LCP/mimic-code/tree/master/tutorials/data_viz">Data analysis and visualization tutorial at TMF summer school 2019</a></li>
+<li><a href="https://scipy-lectures.org/packages/statistics/index.html">Statistics in Python</a></li>
+<li><a href="https://doi.org/10.21105/joss.00547">Bilogur, (2018). Missingno: a missing data visualization suite. Journal of Open Source Software, 3(22), 547.</a></li>
+<li><a href="https://greenteapress.com/wp/think-stats-2e/">Allen B. Downey.  Think Stats, 2nd Edition.</a></li>
+<li><a href="https://docs.scipy.org/doc/scipy/reference/stats.html">Scipy's statistical functions</a></li>
+</ul>
+
+            </div>
+        </article>
+        <div id="ga-tags">
+    
+    <span class="ga-tag">
+        <a class="ga-highlight" href="/tag/Python/">#Python</a>
+    </span>
+    
+    <span class="ga-tag">
+        <a class="ga-highlight" href="/tag/Data%20Mining/">#Data Mining</a>
+    </span>
+    
+</div>
+    </section>
+
+    
+<section id="ga-content_pager">
+
+    <div class="next">
+        <h3>No More</h3>
+        <p class="yue">This is the latest one.</p>
+    </div>
+
+
+    <div class="prev">
+        <a class="ga-highlight" href="/archives/resForML/">Resources for ML research</a>
+        <p class="yue">Resources for ML research</p>
+    </div>
+
+</section>
+
+
+    
+
+</main>
+
+                <footer class="ga-mono" id="ga-footer">
+                    <section>
+                        <span id="ga-uptime"></span>
+                        <span class="brand">0x262f</span>
+                    </section>
+                    <section>
+                        <p class="copyright">
+                            <span>Copyright © 2021 CrazyDogen</span>
+                            <span>Powered by <a no-style href="https://github.com/AlanDecode/Maverick" target="_blank">Maverick & Galileo</a></span>
+                        </p>
+                        <div class="copyright">
+                            <span class="footer-addon">
+                                
+                            </span>
+                            <nav class="social-links">
+                                <ul><li><a class="no-style" title="GitHub" href="https://github.com/crazydogen" target="_blank"><i class="fab fa-github"></i>GitHub</a></li></ul>
+                            </nav>
+                        </div>
+                    </section>
+                    <script>
+                        var site_build_date = "2020-04-19T14:51+08:00"
+                    </script>
+                    <script src="https://cdn.jsdelivr.net/gh/crazydogen/crazydogen.github.io@gh-pages/assets/galileo-7c8cea54ab.js"></script>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <!--katex-->
+    <script defer src="https://cdn.jsdelivr.net/gh/crazydogen/crazydogen.github.io@gh-pages/assets/katex.min.js"></script>
+    <script>
+    mathOpts = {
+        delimiters: [
+            {left: "$$", right: "$$", display: true},
+            {left: "\\[", right: "\\]", display: true},
+            {left: "$", right: "$", display: false},
+            {left: "\\(", right: "\\)", display: false}
+        ]
+    };
+    </script>
+    <script defer src="https://cdn.jsdelivr.net/gh/crazydogen/crazydogen.github.io@gh-pages/assets/auto-render.min.js" onload="renderMathInElement(document.body, mathOpts);"></script>
+
+    <script src="https://cdn.jsdelivr.net/gh/crazydogen/crazydogen.github.io@gh-pages/assets/ExSearch/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/crazydogen/crazydogen.github.io@gh-pages/assets/ExSearch/ExSearch-493cb9cd89.js"></script>
+
+    
+    </body>
+</html>
